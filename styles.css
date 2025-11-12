@@ -1,0 +1,7 @@
+.hero-gold{background:linear-gradient(180deg,#fff 0%,#faf4dd 40%,#f2e3a0 100%);text-align:center;padding:4rem 2rem;}
+.btn{padding:.7rem 1rem;border:1px solid #d4af37;border-radius:.6rem;text-decoration:none;}
+.btn.primary{background:#d4af37;color:#1b1b1b;}
+.section{padding:3rem 0;text-align:center;}
+.container{width:min(900px,90vw);margin:auto;}
+.site-footer{padding:2rem;border-top:1px solid #d9d9d9;text-align:center;font-size:.9rem;background:#fff;}
+.site-footer a{color:#d4af37;text-decoration:none;}
