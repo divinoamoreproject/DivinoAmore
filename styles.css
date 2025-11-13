@@ -1,21 +1,12 @@
 
 body{
-  margin:0;
-  font-family:Arial, sans-serif;
+  margin:0; font-family:Arial, sans-serif;
+  background:linear-gradient(135deg,#f7e7c1,#fff);
+  color:#3b2f1c;
 }
-.page{
-  min-height:100vh;
-  padding:2rem;
-  background:linear-gradient(135deg,#faf3d0,#ffffff);
-}
-header img{
-  width:120px;
-  display:block;
-  margin:0 auto 1rem;
-}
-video{
-  width:100%;
-  max-width:900px;
-  border-radius:12px;
-  background:#000;
-}
+.container{max-width:900px;margin:auto;padding:2rem;}
+h1{font-size:3rem;text-align:center;margin-top:1rem;}
+.subtitle{text-align:center;font-size:1.3rem;margin-bottom:2rem;}
+section{margin:2rem 0;}
+h2{text-align:left;margin-bottom:0.5rem;}
+ul{margin-left:1.2rem;}
