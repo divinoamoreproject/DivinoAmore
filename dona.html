@@ -7,9 +7,9 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
   <meta name="theme-color" content="#d4af37">
-
 </head>
 <body class="page-dona">
+
 <header class="site-header" role="banner">
   <nav class="nav" aria-label="Principale">
     <a class="brand" href="index.html">
@@ -29,20 +29,55 @@
 
 <main class="section">
   <div class="container">
-    <h1>Dona</h1>
-    <p>La tua offerta sostiene il cammino di <em>Divino Amore</em>: i danzatori, i costi organizzativi e le iniziative di
-    solidarietà che desideriamo promuovere.</p>
-    <img src="assets/qr.png" alt="QR code per sostenere Divino Amore" class="qr">
-    <p class="hint">Per collaborazioni, sponsorizzazioni o altre forme di sostegno, puoi contattarci direttamente.</p>
+    <h1>Sostieni Divino Amore</h1>
+    <p>La tua donazione sostiene il progetto <em>Divino Amore</em>: le prove, le esibizioni, i danzatori e le iniziative di solidarietà
+    che nascono da questo cammino di fede, arte e servizio.</p>
+    <p class="hint">Ogni offerta, anche piccola, è un gesto d’amore che ci aiuta a portare il Vangelo nel mondo attraverso la danza,
+    l’arte e la solidarietà.</p>
+
+    <div class="donation-grid">
+      <!-- BLOCCO PAYPAL -->
+      <section class="donation-card">
+        <h2>Dona con PayPal</h2>
+        <p>È il modo più semplice e immediato per sostenerci online.</p>
+        <a class="btn-paypal" href="https://paypal.me/Divinoamoreproject" target="_blank" rel="noopener">
+          Dona ora con PayPal
+        </a>
+      </section>
+
+      <!-- BLOCCO IBAN -->
+      <section class="donation-card">
+        <h2>Dona con bonifico</h2>
+        <p>Puoi anche effettuare un bonifico sulla carta PostePay Evolution dedicata al progetto.</p>
+
+        <div class="iban-box">
+          <p class="iban-label">Intestato a</p>
+          <p class="iban-holder">Simone Giovanni Messina</p>
+
+          <p class="iban-label">IBAN</p>
+          <p class="iban-code" id="iban-text">IT88L3608105138255416955429</p>
+
+          <button type="button"
+                  class="btn-copy-iban"
+                  data-iban="IT88L3608105138255416955429">
+            Copia IBAN
+          </button>
+        </div>
+
+        <p class="hint">Questa PostePay Evolution viene utilizzata esclusivamente per le spese legate al progetto
+        <em>Divino Amore</em>.</p>
+      </section>
+    </div>
   </div>
 </main>
+
 <footer class="site-footer" role="contentinfo">
   <div class="container">
-    <p>© <span id="year"></span> Divino Amore — “Ama il tuo prossimo come te stesso”.</p>
+    <p>©️ <span id="year"></span> Divino Amore — “Ama il tuo prossimo come te stesso”.</p>
     <p class="license">Contenuti protetti da licenza Creative Commons BY-NC-ND 4.0.</p>
   </div>
 </footer>
-<script src="script.js" defer></script>
 
+<script src="script.js" defer></script>
 </body>
-</html>
+</html>    
