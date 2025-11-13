@@ -1,15 +1,17 @@
 <!doctype html>
 <html lang="it">
+
 <head>
-  <title>Media — Divino Amore</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Media — Divino Amore</title>
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
   <meta name="theme-color" content="#d4af37">
-
 </head>
+
 <body>
+
 <header class="site-header" role="banner">
   <nav class="nav" aria-label="Principale">
     <a class="brand" href="index.html">
@@ -20,7 +22,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="chi-siamo.html">Chi siamo</a></li>
       <li><a href="esibizioni.html">Le nostre esibizioni</a></li>
-      <li><a href="media.html">Media</a></li>
+      <li><a href="media.html" class="active">Media</a></li>
       <li><a href="dona.html">Dona</a></li>
       <li><a href="contatti.html">Contatti</a></li>
     </ul>
@@ -29,19 +31,35 @@
 
 <main class="section">
   <div class="container">
-    <h1 id="trailer">Media</h1>
-    <p>Video e testimonianze del progetto <em>Divino Amore</em>.</p>
-    <div class="video-wrapper">
-      <iframe title="Trailer Divino Amore" src="https://www.youtube.com/embed/dQw4w9WgXcQ" loading="lazy" allowfullscreen></iframe>
-    </div>
+    <h1>Media</h1>
+    <p>I contenuti multimediali del progetto <em>Divino Amore</em>.</p>
+
+    <hr style="margin: 2rem auto; width: 60%; border: 0; border-top: 1px solid #d8d8d8;">
+
+    <h2 style="margin-top:2rem;">Rehearsal – Prove Divino Amore</h2>
+
+    <video controls preload="metadata" class="video-player" style="max-width:100%; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,.2); margin-top:1rem;">
+      <source src="Rehearsal.mp4" type="video/mp4">
+      Il tuo browser non supporta il video HTML5.
+    </video>
+
+    <p class="hint" style="margin-top: 0.5rem; color:#555; font-size:0.9rem;">
+      Riprese delle prove del progetto Divino Amore.
+    </p>
+
   </div>
 </main>
+
 <footer class="site-footer" role="contentinfo">
   <div class="container">
-    <p>© <span id="year"></span> Divino Amore — “Ama il tuo prossimo come te stesso”.</p>
-    <p class="license">Tutti i contenuti sono protetti da licenza <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.it" target="_blank" rel="noopener">Creative Commons BY-NC-ND 4.0</a>.</p>
+    <p>©️ <span id="year"></span> Divino Amore — “Ama il tuo prossimo come te stesso”.</p>
+    <p class="license">Contenuti protetti da licenza Creative Commons BY-NC-ND 4.0.</p>
   </div>
 </footer>
-<script src="script.js" defer></script>
 
-</body></html>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
