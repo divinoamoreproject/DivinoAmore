@@ -1,10 +1,79 @@
-<!doctype html><html><head><link rel='stylesheet' href='styles.css'><title>Media</title></head>
-<body class='page'>
-<h1>Media</h1>
-<h2>Rehearsal – Parte 1</h2>
-<video controls><source src='rehearsal-parte1.mp4' type='video/mp4'></video>
-<h2>Rehearsal – Parte 2</h2>
-<video controls><source src='rehearsal-parte2.mp4' type='video/mp4'></video>
-<h2>Trailer Rehearsal</h2>
-<video controls><source src='trailer-rehearsal.mp4' type='video/mp4'></video>
-</body></html>
+<!doctype html>
+<html lang="it">
+<head>
+  <title>Media — Divino Amore</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#d4af37">
+
+</head>
+<body class="page-media">
+<header class="site-header" role="banner">
+  <nav class="nav" aria-label="Principale">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="assets/logo.png" alt="Logo Divino Amore" width="40" height="40">
+      <span class="brand-text">Divino Amore</span>
+    </a>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chi-siamo.html">Chi siamo</a></li>
+      <li><a href="esibizioni.html">Le nostre esibizioni</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="dona.html">Dona</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="section">
+  <div class="container">
+    <h1>Media</h1>
+    <p>Alcuni momenti del cammino di <em>Divino Amore</em>: prove, ricerca, ascolto e lavoro condiviso.</p>
+
+    <hr class="divider">
+
+    <section aria-labelledby="v1">
+      <h2 id="v1">Rehearsal – Prove Divino Amore (Parte 1)</h2>
+      <video controls preload="metadata" class="video-player">
+        <source src="rehearsal-parte1.mp4" type="video/mp4">
+        Il tuo browser non supporta il video HTML5.
+      </video>
+      <p class="hint">La prima parte delle prove ufficiali del progetto Divino Amore.</p>
+    </section>
+
+    <hr class="divider">
+
+    <section aria-labelledby="v2">
+      <h2 id="v2">Rehearsal – Prove Divino Amore (Parte 2)</h2>
+      <video controls preload="metadata" class="video-player">
+        <source src="rehearsal-parte2.mp4" type="video/mp4">
+        Il tuo browser non supporta il video HTML5.
+      </video>
+      <p class="hint">La seconda parte delle prove del progetto Divino Amore.</p>
+    </section>
+
+    <hr class="divider">
+
+    <section aria-labelledby="v3">
+      <h2 id="v3">Rehearsal – Prove del Videotrailer</h2>
+      <video controls preload="metadata" class="video-player">
+        <source src="trailer-rehearsal.mp4" type="video/mp4">
+        Il tuo browser non supporta il video HTML5.
+      </video>
+      <p class="hint">Momenti delle prove dedicate alla realizzazione del videotrailer ufficiale.</p>
+    </section>
+
+  </div>
+</main>
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p>© <span id="year"></span> Divino Amore — “Ama il tuo prossimo come te stesso”.</p>
+    <p class="license">Contenuti protetti da licenza Creative Commons BY-NC-ND 4.0.</p>
+  </div>
+</footer>
+<script src="script.js" defer></script>
+
+</body>
+</html>
