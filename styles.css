@@ -156,3 +156,90 @@ ul li{
   color:var(--muted);
   background:#ffffffd0;
 }
+/* --- SEZIONE DONA --- */
+
+.donation-grid{
+  margin-top:2.5rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:1.5rem;
+  justify-content:center;
+}
+
+.donation-card{
+  flex:1 1 260px;
+  max-width:360px;
+  padding:1.5rem 1.3rem;
+  border-radius:18px;
+  background:#ffffffd9;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.donation-card h2{
+  margin-bottom:.6rem;
+}
+
+.btn-paypal{
+  display:inline-block;
+  margin-top:1rem;
+  padding:.7rem 1.4rem;
+  border-radius:999px;
+  background:#ffc439;
+  color:#111;
+  font-weight:600;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  box-shadow:0 4px 12px rgba(0,0,0,.18);
+}
+
+.btn-paypal:hover{
+  filter:brightness(0.95);
+}
+
+.iban-box{
+  margin-top:1rem;
+  padding:1rem 1rem 1.2rem;
+  border-radius:14px;
+  background:#fdf7e7;
+  border:1px solid rgba(0,0,0,.06);
+}
+
+.iban-label{
+  font-size:.8rem;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--muted);
+  margin:.2rem 0;
+}
+
+.iban-holder{
+  margin:.1rem 0 .4rem;
+  font-weight:500;
+}
+
+.iban-code{
+  font-family:monospace;
+  font-size:.95rem;
+  padding:.3rem .6rem;
+  border-radius:8px;
+  background:#fff;
+  display:inline-block;
+}
+
+.btn-copy-iban{
+  display:inline-block;
+  margin-top:.6rem;
+  padding:.45rem 1rem;
+  border-radius:999px;
+  border:1px solid var(--gold);
+  background:transparent;
+  font-size:.85rem;
+  cursor:pointer;
+}
+
+.btn-copy-iban.copied{
+  background:var(--gold);
+  color:#1b1b1b;
+  font-weight:600;
+}
