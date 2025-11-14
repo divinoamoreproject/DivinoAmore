@@ -578,3 +578,72 @@ ul li{
   box-shadow: 0 10px 25px rgba(0,0,0,.22);
   filter: brightness(0.97);
 }
+/* ---- PAGINA CONTATTI ---- */
+
+.page-contatti {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.page-contatti h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Testo introduttivo */
+.page-contatti .intro {
+  max-width: 550px;
+  margin: 0 auto 35px auto;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Box con i contatti */
+.contatti-box {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  max-width: 430px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Riga contatto */
+.contatto-riga {
+  font-size: 18px;
+  margin: 15px 0;
+  color: #333;
+}
+
+/* Link email */
+.contatto-riga a {
+  text-decoration: none;
+  color: #5E3CBC;
+  font-weight: 500;
+}
+
+.contatto-riga a:hover {
+  color: #c2a24d;
+}
+
+/* Pulsante WhatsApp */
+.btn-wa {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 14px 22px;
+  background: #25D366;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 5px 14px rgba(0,0,0,0.15);
+}
+
+.btn-wa:hover {
+  background: #1da851;
+  transform: translateY(-2px);
+}
