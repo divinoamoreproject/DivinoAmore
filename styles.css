@@ -698,6 +698,12 @@ nav {
   justify-content: center;
   gap: 2.2rem;
   padding: 1.4rem 0;
+
+  /* sfondo “foglie” oro-perla + leggero movimento */
+  background: linear-gradient(135deg, #f7f2e8, #e6d9b8, #f7f2e8);
+  background-size: 200% 200%;
+  animation: goldShimmer 10s infinite alternate ease-in-out;
+  border-bottom: 1px solid rgba(176, 138, 69, 0.25);
 }
 
 /* testo del menu color oro */
@@ -753,11 +759,15 @@ header {
   padding: 1rem 0;
   border-bottom: 1px solid rgba(176, 138, 69, 0.25);
 }
+@media (max-width: 768px) {
+  nav a {
+    color: #bfa063 !important;
+  }
 
-/* Animazione shimmer oro */
-@keyframes goldShimmer {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+  nav a.active {
+    color: #e6c46b !important;
+  }
+}
 }
 /* ======== FOOTER ======== */
 
@@ -780,3 +790,7 @@ footer p:last-child {
   font-size: .8rem;
   opacity: 0.75;
 }
+/* Animazione shimmer oro */
+@keyframes goldShimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
