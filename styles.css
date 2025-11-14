@@ -550,10 +550,11 @@ ul li{
 }
 /* ICONA WHATSAPP NEL BOTTONE */
 .wa-icon{
-  width: 18px;
-  height: 18px;
-  margin-right: 8px;
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
   vertical-align: middle;
+  border-radius: 4px;
 }
 
 /* Aggiorno stile bottone */
