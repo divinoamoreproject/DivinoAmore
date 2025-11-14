@@ -720,7 +720,31 @@ nav a.active {
   color: #e6c46b;
   font-weight: 700;
   border-bottom: 2px solid #e6c46b;
+/* Effetto underline animato */
+nav a {
+  position: relative;
+}
 
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #e6c46b;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Quando passi con il mouse: underline animato */
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Quando la pagina è attiva: underline fisso */
+nav a.active::after {
+  width: 100%;
+}
 /* ======== FOOTER ======== */
 
 footer {
