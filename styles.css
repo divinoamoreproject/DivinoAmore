@@ -629,21 +629,34 @@ ul li{
 }
 
 /* Pulsante WhatsApp */
-.btn-wa {
-  display: inline-block;
-  margin-top: 28px;
-  padding: 14px 22px;
-  background: #25D366;
-  color: white;
-  font-size: 18px;
-  border-radius: 10px;
+.btn-prenota{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-  box-shadow: 0 5px 14px rgba(0,0,0,0.15);
+  background: linear-gradient(135deg, #d9b84a, #f5eac4);
+  color: #1e1b14;
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.btn-wa:hover {
-  background: #1da851;
+.btn-prenota:hover{
   transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.22);
+  filter: brightness(0.97);
+}
+
+.wa-icon{
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.contatti-bottone{
+  margin-top: 24px;
+  text-align: center;
 }
