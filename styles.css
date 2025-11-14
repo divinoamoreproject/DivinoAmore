@@ -745,6 +745,20 @@ nav a:hover::after {
 nav a.active::after {
   width: 100%;
 }
+  /* Sfondo barra menu con effetto oro perlato */
+header {
+  background: linear-gradient(135deg, #f7f2e8, #e6d9b8, #f7f2e8);
+  background-size: 200% 200%;
+  animation: goldShimmer 6s infinite alternate ease-in-out;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(176, 138, 69, 0.25);
+}
+
+/* Animazione shimmer oro */
+@keyframes goldShimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
 /* ======== FOOTER ======== */
 
 footer {
