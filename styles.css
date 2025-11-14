@@ -714,3 +714,7 @@ header nav a:hover{
     font-size: 0.9rem;
   }
 }
+/* FIX FINALE – UNIFICA TUTTI I MENU */
+header nav a {
+  color: #bfa063 !important;
+}
