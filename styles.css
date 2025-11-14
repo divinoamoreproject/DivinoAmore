@@ -418,7 +418,7 @@ ul li{
 /* SFONDO CON FOGLIE - PAGINA CHI SIAMO */
 .page-chi{
   background-color: #f4effa;                     /* lilla chiaro */
-  background-image: url("assets/Sfondo foglie.png");
+  background-image: url("assets/Sfondo-foglie.png");
   background-repeat: no-repeat;
   background-size: cover;                        /* l'immagine copre lo schermo */
   background-position: center top;
