@@ -243,3 +243,32 @@ ul li{
   color:#1b1b1b;
   font-weight:600;
 }
+.media-grid{
+  margin-top:2.5rem;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:2rem;
+}
+
+.media-card{
+  background:#ffffffd9;
+  border-radius:18px;
+  padding:1.3rem 1.1rem 1.6rem;
+  box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.media-card h2{
+  margin-bottom:.6rem;
+}
+
+@media (max-width:900px){
+  .media-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width:650px){
+  .media-grid{
+    grid-template-columns:1fr;
+  }
+}
