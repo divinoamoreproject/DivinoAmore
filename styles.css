@@ -415,53 +415,57 @@ ul li{
     margin: 0 auto;
   }
 }
-/* PAGINA DI BENVENUTO (INDEX) */
+/* PAGINA DI BENVENUTO (INDEX) – VERSIONE SEMPLICE E CENTRATA */
 .page-landing{
-  min-height:100vh;
+  min-height: 100vh;
   background: radial-gradient(circle at top, #f8f1df 0, #ffffff 55%, #f3f3f3 100%);
-  display:flex;
-  align-items:center;
-  justify-content:center;
 }
 
 .landing-wrapper{
-  text-align:center;
-  padding:2rem 1.5rem;
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* centra in verticale */
+  align-items: center;       /* centra in orizzontale */
+  text-align: center;
 }
 
 .landing-logo{
-  display:block;
-  margin:0 auto 1rem;
+  display: block;
+  margin: 0 auto 1rem;
 }
 
 .landing-title{
-  font-size:2rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  margin-bottom:.4rem;
+  font-size: 2rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: .4rem;
 }
 
 .landing-tagline{
-  font-size:.95rem;
-  margin-bottom:1.5rem;
+  font-size: .95rem;
+  margin-bottom: 1.7rem;
 }
 
 .landing-nav{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .7rem;
 }
 
 .landing-nav a{
-  text-decoration:none;
-  padding:.5rem 1.2rem;
-  border-radius:999px;
-  border:1px solid rgba(0,0,0,.12);
-  background:#ffffffc9;
-  font-size:.9rem;
+  text-decoration: none;
+  padding: .5rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.12);
+  background: #ffffffc9;
+  font-size: .9rem;
 }
 
 .landing-nav a:hover{
-  background:#f5e8c5;
+  background: #f5e8c5;
 }
