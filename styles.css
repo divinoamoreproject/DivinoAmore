@@ -272,3 +272,24 @@ ul li{
     grid-template-columns:1fr;
   }
 }
+/* MEDIA – dettagli emozionali */
+.media-subtitle{
+  margin-top:.4rem;
+  font-size:.95rem;
+  color:var(--muted);
+}
+
+.media-label{
+  display:inline-block;
+  font-size:.8rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--muted);
+  margin:0 0 .25rem;
+}
+
+.media-outro{
+  margin-top:2.5rem;
+  font-size:.95rem;
+  color:var(--muted);
+  text-align:center;
