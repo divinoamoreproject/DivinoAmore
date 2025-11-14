@@ -751,3 +751,6 @@ header nav a:hover {
 .contatto-riga {
   color: #6d5b3f;
 }
+body {
+  background: magenta !important;
+}
