@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <title>Le nostre esibizioni — Divino Amore</title>
   <meta charset="utf-8">
+  <title>Le nostre esibizioni — Divino Amore</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
-  <meta name="theme-color" content="#d4af37">
-
+  <meta name="theme-color" content="#f8f1df">
 </head>
 <body class="page-esibizioni">
+
 <header class="site-header" role="banner">
   <nav class="nav" aria-label="Principale">
     <a class="brand" href="index.html">
@@ -28,21 +28,65 @@
 </header>
 
 <main class="section">
-  <div class="container">
+  <div class="container esibizioni-container">
+
     <h1>Le nostre esibizioni</h1>
-    <p>Ogni esibizione di <em>Divino Amore</em> è pensata come una testimonianza: una preghiera danzata che parla di fede,
-    guarigione interiore, fiducia e amore per il prossimo.</p>
-    <p>Attraverso il movimento, la musica e la relazione tra i corpi, desideriamo creare spazi in cui chi guarda possa
-    sentirsi accolto, toccato, provocato a credere di nuovo nella luce.</p>
+    <p class="intro-lead">
+      Ogni esibizione di <strong>Divino Amore</strong> è un invito a lasciarsi toccare dal Vangelo
+      attraverso la danza, l’ascolto e la bellezza condivisa.
+    </p>
+
+    <!-- FOTO PRINCIPALE -->
+    <figure class="esibizioni-photo">
+      <img src="assets/teatro-orione.jpg"
+           alt="Il gruppo di Divino Amore in scena con le gonne turchesi">
+    </figure>
+
+    <!-- PROSSIMA ESIBIZIONE -->
+    <section class="esibizione-card">
+      <p class="badge">Prossima esibizione</p>
+      <h2>Spettacolo “Divino Amore” — Teatro Orione</h2>
+
+      <dl class="esibizione-details">
+        <div>
+          <dt>Data</dt>
+          <dd>In definizione</dd>
+        </div>
+        <div>
+          <dt>Luogo</dt>
+          <dd>Teatro Orione, Roma</dd>
+        </div>
+      </dl>
+
+      <p>
+        Una serata dedicata all’incontro tra fede, danza e testimonianza. Attraverso il linguaggio
+        del corpo desideriamo raccontare un Amore che rialza, guarisce e apre strade nuove di
+        speranza.
+      </p>
+    </section>
+
+    <section class="esibizione-info">
+      <h3>Nuove date</h3>
+      <p>
+        Stiamo lavorando alla programmazione delle prossime esibizioni. Questa pagina verrà
+        aggiornata man mano che le nuove date e i nuovi luoghi saranno confermati.
+      </p>
+      <p>
+        Se desideri ospitare <strong>Divino Amore</strong> nella tua parrocchia, diocesi o realtà
+        ecclesiale, puoi contattarci dalla sezione <a href="contatti.html">Contatti</a>.
+      </p>
+    </section>
+
   </div>
 </main>
+
 <footer class="site-footer" role="contentinfo">
   <div class="container">
-    <p>© <span id="year"></span> Divino Amore — “Ama il tuo prossimo come te stesso”.</p>
+    <p>©️ <span id="year"></span> Divino Amore — “Ama il tuo prossimo come te stesso”.</p>
     <p class="license">Contenuti protetti da licenza Creative Commons BY-NC-ND 4.0.</p>
   </div>
 </footer>
-<script src="script.js" defer></script>
 
+<script src="script.js" defer></script>
 </body>
 </html>
