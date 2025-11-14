@@ -353,18 +353,20 @@ ul li{
     text-align:center;
   }
 }
-/* FOTO CHI SIAMO */
+/* FOTO CHI SIAMO - VERSIONE PIÙ ELEGANTE */
 .chi-photo{
-  margin:2rem auto;
-  max-width:900px;
+  margin: 2.5rem auto;
+  max-width: 650px;   /* FOTO PIÙ PICCOLE E PIÙ ELEGANTI */
 }
+
 .chi-photo img{
-  width:100%;
-  border-radius:18px;
-  box-shadow:0 14px 40px rgba(0,0,0,.22);
-  display:block;
-  object-fit:cover;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.18); /* OMBRA PIÙ LEGGERA */
+  display: block;
+  object-fit: cover;
 }
+
 .chi-photo-bottom{
-  margin-top:2.5rem;
+  margin-top: 3rem;
 }
