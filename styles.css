@@ -479,14 +479,20 @@ ul li{
   margin:2rem auto 2.5rem;
   max-width:750px;
 }
+.esibizioni-photo{
+  text-align:center;
+  margin: 1.5rem auto 2rem;
+}
 
 .esibizioni-photo img{
-  width:100%;
+  width:65%;
+  max-width:420px;
   border-radius:18px;
-  display:block;
+  display:inline-block;
   object-fit:cover;
-  box-shadow:0 14px 35px rgba(0,0,0,.18);
+  box-shadow:0 12px 30px rgba(0,0,0,.14);
 }
+
 
 .esibizione-card{
   background:#ffffffd9;
