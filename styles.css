@@ -820,3 +820,23 @@ footer p:last-child {
     font-size: 0.9rem;         /* un filo più piccolo per farci stare tutto */
   }
 }
+/* FIX MENU MOBILE: mostra sempre "Home" */
+nav a:first-child {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: auto !important;
+}
+@media(max-width: 768px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  nav a {
+    flex: none;
+    min-width: fit-content;
+  }
+}
