@@ -389,3 +389,29 @@ ul li{
   margin: 0 auto;
   display: block;
   border-radius: 18px;
+/* Sistemazione pagina CHI SIAMO su mobile */
+@media (max-width: 750px){
+  .chi-container{
+    max-width: 100%;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    text-align: center;      /* tutto il testo centrato nel container */
+  }
+
+  .chi-grid section{
+    text-align: center;
+  }
+
+  .chi-section-full{
+    text-align: center;
+  }
+
+  .chi-photo{
+    max-width: 100%;         /* la foto rispetta la larghezza del testo */
+  }
+
+  .chi-photo img{
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
