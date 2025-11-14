@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <title>Media — Divino Amore</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Media — Divino Amore</title>
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
   <meta name="theme-color" content="#d4af37">
-
 </head>
 <body class="page-media">
+
 <header class="site-header" role="banner">
   <nav class="nav" aria-label="Principale">
     <a class="brand" href="index.html">
@@ -30,50 +30,52 @@
 <main class="section">
   <div class="container">
     <h1>Media</h1>
-    <p>Alcuni momenti del cammino di <em>Divino Amore</em>: prove, ricerca, ascolto e lavoro condiviso.</p>
+    <p>Qui raccogliamo alcuni momenti del cammino di <em>Divino Amore</em>: prove, ricerca e un primo sguardo al
+    trailer ufficiale.</p>
 
-    <hr class="divider">
+    <div class="media-grid">
 
-    <section aria-labelledby="v1">
-      <h2 id="v1">Rehearsal – Prove Divino Amore (Parte 1)</h2>
-      <video controls preload="metadata" class="video-player">
-        <source src="rehearsal-parte1.mp4" type="video/mp4">
-        Il tuo browser non supporta il video HTML5.
-      </video>
-      <p class="hint">La prima parte delle prove ufficiali del progetto Divino Amore.</p>
-    </section>
+      <!-- VIDEO 1 -->
+      <article class="media-card">
+        <h2>Rehearsal — Parte 1</h2>
+        <video controls preload="metadata" class="video-player">
+          <source src="rehearsal.mp4" type="video/mp4">
+          Il tuo browser non supporta il video HTML5.
+        </video>
+        <p class="hint">La prima parte delle prove del progetto Divino Amore.</p>
+      </article>
 
-    <hr class="divider">
+      <!-- VIDEO 2 -->
+      <article class="media-card">
+        <h2>Rehearsal — Parte 2</h2>
+        <video controls preload="metadata" class="video-player">
+          <source src="rehearsal-2.mp4" type="video/mp4">
+          Il tuo browser non supporta il video HTML5.
+        </video>
+        <p class="hint">La seconda parte del lavoro in sala: dettagli, correzioni, ascolto reciproco.</p>
+      </article>
 
-    <section aria-labelledby="v2">
-      <h2 id="v2">Rehearsal – Prove Divino Amore (Parte 2)</h2>
-      <video controls preload="metadata" class="video-player">
-        <source src="rehearsal-parte2.mp4" type="video/mp4">
-        Il tuo browser non supporta il video HTML5.
-      </video>
-      <p class="hint">La seconda parte delle prove del progetto Divino Amore.</p>
-    </section>
+      <!-- VIDEO 3 -->
+      <article class="media-card">
+        <h2>Backstage — Anteprima del Trailer Ufficiale</h2>
+        <video controls preload="metadata" class="video-player">
+          <source src="trailer-rehearsal.mp4" type="video/mp4">
+          Il tuo browser non supporta il video HTML5.
+        </video>
+        <p class="hint">Un’anteprima dietro le quinte del trailer ufficiale di Divino Amore.</p>
+      </article>
 
-    <hr class="divider">
-
-    <section aria-labelledby="v3">
-      <h2 id="v3">Rehearsal – Prove del Videotrailer</h2>
-      <video controls preload="metadata" class="video-player">
-        <source src="trailer-rehearsal.mp4" type="video/mp4">
-        Il tuo browser non supporta il video HTML5.
-      </video>
-      <p class="hint">Momenti delle prove dedicate alla realizzazione del videotrailer ufficiale.</p>
-    </section>
-
+    </div>
   </div>
 </main>
+
 <footer class="site-footer" role="contentinfo">
   <div class="container">
-    <p>© <span id="year"></span> Divino Amore — “Ama il tuo prossimo come te stesso”.</p>
+    <p>©️ <span id="year"></span> Divino Amore — “Ama il tuo prossimo come te stesso”.</p>
     <p class="license">Contenuti protetti da licenza Creative Commons BY-NC-ND 4.0.</p>
   </div>
 </footer>
-<script src="script.js" defer></script>
 
+<script src="script.js" defer></script>
 </body>
 </html>
