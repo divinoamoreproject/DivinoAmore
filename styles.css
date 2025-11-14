@@ -1,8 +1,13 @@
-
+/* =========================
+   VARIABILI DI BASE
+   ========================= */
 :root{
   --gold:#d4af37;
+  --gold-soft:#bfa063;
+  --gold-light:#e6c46b;
   --dark:#2b2320;
   --muted:#6a625c;
+
   --bg-home:radial-gradient(circle at top, #fff7e0 0, #fff 45%, #f6efe0 100%);
   --bg-chi:#f5f4ff;
   --bg-esibizioni:#fff4f4;
@@ -12,15 +17,18 @@
   --bg-privacy:#f8f8f8;
 }
 
-/* RESET */
+/* =========================
+   RESET BASE
+   ========================= */
 *{box-sizing:border-box;}
+
 body{
   margin:0;
   font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   color:var(--dark);
 }
 
-/* BACKGROUND PER PAGINA */
+/* BACKGROUND PER PAGINA (class sul <body>) */
 body.home-page{background:var(--bg-home);}
 body.page-chi{background:var(--bg-chi);}
 body.page-esibizioni{background:var(--bg-esibizioni);}
@@ -29,54 +37,140 @@ body.page-dona{background:var(--bg-dona);}
 body.page-contatti{background:var(--bg-contatti);}
 body.page-privacy{background:var(--bg-privacy);}
 
-/* HEADER */
-.site-header{
-  border-bottom:1px solid rgba(0,0,0,.06);
-  background:#ffffffdd;
-  backdrop-filter:blur(14px);
+/* TITOLI GENERICI */
+h1,h2,h3{
+  margin-top:0;
+  text-align:center;
 }
+
+/* LISTE SENZA PUNTINI */
+ul{
+  padding-left:0;
+  list-style:none;
+}
+ul li{
+  margin:.5rem 0;
+}
+
+/* =========================
+   HEADER + MENU
+   ========================= */
+
+/* Barra in alto con sfondo oro perlato */
+.site-header{
+  background:linear-gradient(135deg,#f7f2e8,#e6d9b8,#f7f2e8);
+  background-size:200% 200%;
+  animation:goldShimmer 14s ease-in-out infinite;
+  border-bottom:1px solid rgba(176,138,69,.25);
+}
+
+/* Contenitore del menu (logo + voci) */
 .nav{
-  max-width:1000px;
+  max-width:1100px;
   margin:0 auto;
-  padding:.7rem 1rem;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:1rem;
+  gap:1.5rem;
+  padding:.7rem 1.5rem;
 }
+
+/* Logo + scritta Divino Amore */
 .brand{
   display:flex;
   align-items:center;
-  gap:.5rem;
+  gap:.6rem;
+  text-decoration:none;
+  color:var(--gold-soft);
 }
 .brand-logo{
   border-radius:999px;
   box-shadow:0 4px 14px rgba(0,0,0,.18);
 }
 .brand-text{
-  font-weight:600;
+  font-weight:700;
+  font-size:1.1rem;
   letter-spacing:.03em;
 }
+
+/* Lista voci: Home, Chi siamo, ecc. */
 .menu{
   list-style:none;
   display:flex;
-  flex-wrap:wrap;
-  gap:.8rem;
+  align-items:center;
+  gap:1.6rem;
   margin:0;
   padding:0;
-  font-size:.9rem;
-}
-.menu a{
-  text-decoration:none;
-  color:var(--dark);
-  padding:.25rem .6rem;
-  border-radius:999px;
-}
-.menu a:hover{
-  background:rgba(0,0,0,.04);
 }
 
-/* HERO CENTRATO */
+/* Link del menu */
+.menu a{
+  position:relative;
+  color:var(--gold-soft);
+  font-weight:600;
+  text-decoration:none;
+  font-size:1rem;
+  letter-spacing:.4px;
+  transition:all .25s ease;
+}
+
+/* Hover */
+.menu a:hover{
+  color:#e3c98a;
+  transform:scale(1.05);
+}
+
+/* Pagina attiva */
+.menu a.active{
+  color:var(--gold-light);
+  font-weight:700;
+}
+
+/* Underline animata elegante */
+.menu a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0;
+  height:2px;
+  background-color:var(--gold-light);
+  transition:width .3s ease-in-out;
+}
+.menu a:hover::after,
+.menu a.active::after{
+  width:100%;
+}
+
+/* Animazione luce oro sulla barra */
+@keyframes goldShimmer{
+  0%{background-position:0% 50%;}
+  100%{background-position:100% 50%;}
+}
+
+/* MENU SU CELLULARE */
+@media (max-width:768px){
+  .nav{
+    flex-direction:column;
+    align-items:center;
+    gap:.7rem;
+    padding:.9rem 1rem 1.1rem;
+  }
+
+  .menu{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:.9rem 1.4rem;
+  }
+
+  .menu a{
+    font-size:.95rem;
+  }
+}
+
+/* =========================
+   HERO (HOME)
+   ========================= */
 .hero{
   padding:3.5rem 1rem 2.5rem;
   text-align:center;
@@ -97,40 +191,28 @@ body.page-privacy{background:var(--bg-privacy);}
   margin:1rem 0 .4rem;
   font-size:2.6rem;
   letter-spacing:.12em;
-  text-align:center;
 }
 .hero-subtitle{
   margin:0 auto 1.5rem;
   max-width:520px;
   color:var(--muted);
   font-size:1.05rem;
-  text-align:center;
 }
 
-/* SEZIONI CENTRATE */
+/* =========================
+   STRUTTURA SEZIONI
+   ========================= */
 .section{
   padding:3rem 1rem;
 }
 .container{
   max-width:800px;
   margin:0 auto;
-  text-align:center; /* <— qui li centriamo tutti */
-}
-h1, h2, h3{
-  margin-top:0;
-  text-align:center;
 }
 
-/* LISTE */
-ul{
-  padding-left:0;
-  list-style:none;
-}
-ul li{
-  margin:0.5rem 0;
-}
-
-/* VIDEO */
+/* =========================
+   VIDEO GENERICI
+   ========================= */
 .video-player{
   width:100%;
   max-width:900px;
@@ -147,7 +229,9 @@ ul li{
   text-align:center;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+   ========================= */
 .site-footer{
   border-top:1px solid rgba(0,0,0,.06);
   padding:1.5rem 1rem 2rem;
@@ -156,8 +240,10 @@ ul li{
   color:var(--muted);
   background:#ffffffd0;
 }
-/* --- SEZIONE DONA --- */
 
+/* =========================
+   PAGINA DONA
+   ========================= */
 .donation-grid{
   margin-top:2.5rem;
   display:flex;
@@ -165,7 +251,6 @@ ul li{
   gap:1.5rem;
   justify-content:center;
 }
-
 .donation-card{
   flex:1 1 260px;
   max-width:360px;
@@ -174,7 +259,6 @@ ul li{
   background:#ffffffd9;
   box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
-
 .donation-card h2{
   margin-bottom:.6rem;
 }
@@ -192,9 +276,8 @@ ul li{
   cursor:pointer;
   box-shadow:0 4px 12px rgba(0,0,0,.18);
 }
-
 .btn-paypal:hover{
-  filter:brightness(0.95);
+  filter:brightness(.95);
 }
 
 .iban-box{
@@ -204,7 +287,6 @@ ul li{
   background:#fdf7e7;
   border:1px solid rgba(0,0,0,.06);
 }
-
 .iban-label{
   font-size:.8rem;
   text-transform:uppercase;
@@ -212,12 +294,10 @@ ul li{
   color:var(--muted);
   margin:.2rem 0;
 }
-
 .iban-holder{
   margin:.1rem 0 .4rem;
   font-weight:500;
 }
-
 .iban-code{
   font-family:monospace;
   font-size:.95rem;
@@ -226,7 +306,6 @@ ul li{
   background:#fff;
   display:inline-block;
 }
-
 .btn-copy-iban{
   display:inline-block;
   margin-top:.6rem;
@@ -237,48 +316,30 @@ ul li{
   font-size:.85rem;
   cursor:pointer;
 }
-
 .btn-copy-iban.copied{
   background:var(--gold);
   color:#1b1b1b;
   font-weight:600;
 }
+
+/* =========================
+   PAGINA MEDIA
+   ========================= */
 .media-grid{
   margin-top:2.5rem;
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:2rem;
 }
-
 .media-card{
   background:#ffffffd9;
   border-radius:18px;
   padding:1.3rem 1.1rem 1.6rem;
   box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
-
 .media-card h2{
   margin-bottom:.6rem;
 }
-
-@media (max-width:900px){
-  .media-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-}
-
-@media (max-width:650px){
-  .media-grid{
-    grid-template-columns:1fr;
-  }
-}
-/* MEDIA – dettagli emozionali */
-.media-subtitle{
-  margin-top:.4rem;
-  font-size:.95rem;
-  color:var(--muted);
-}
-
 .media-label{
   display:inline-block;
   font-size:.8rem;
@@ -287,14 +348,59 @@ ul li{
   color:var(--muted);
   margin:0 0 .25rem;
 }
-
+.media-subtitle{
+  margin-top:.4rem;
+  font-size:.95rem;
+  color:var(--muted);
+}
 .media-outro{
   margin-top:2.5rem;
   font-size:.95rem;
   color:var(--muted);
   text-align:center;
-/* --- PAGINA CHI SIAMO --- */
+}
 
+@media (max-width:900px){
+  .media-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media (max-width:650px){
+  .media-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* SEZIONE TRAILER IN MEDIA */
+.trailer-hero{
+  margin:2.5rem auto 2.5rem;
+  padding:2rem 1.5rem 2.3rem;
+  border-radius:20px;
+  background:radial-gradient(circle at top,#f5e5b8 0,#f9f2dd 40%,#ffffff 85%);
+  text-align:center;
+  box-shadow:0 12px 30px rgba(0,0,0,.16);
+}
+.trailer-hero h2{
+  margin-bottom:.5rem;
+}
+.trailer-subtitle{
+  margin-bottom:1.5rem;
+  font-size:.95rem;
+}
+.trailer-video-wrapper{
+  display:flex;
+  justify-content:center;
+}
+.trailer-video-wrapper video{
+  width:100%;
+  max-width:720px;
+  border-radius:16px;
+  box-shadow:0 10px 24px rgba(0,0,0,.2);
+}
+
+/* =========================
+   PAGINA CHI SIAMO
+   ========================= */
 .chi-container{
   max-width:900px;
 }
@@ -312,11 +418,9 @@ ul li{
   gap:2rem;
   text-align:left;
 }
-
 .chi-grid h2{
   text-align:left;
 }
-
 .chi-grid p{
   line-height:1.7;
 }
@@ -325,7 +429,6 @@ ul li{
   margin-top:2.5rem;
   text-align:left;
 }
-
 .chi-section-full p{
   line-height:1.7;
 }
@@ -336,622 +439,226 @@ ul li{
   font-size:.95rem;
   color:var(--muted);
 }
-
 .chi-quote span{
   display:block;
   margin-top:.3rem;
   font-size:.85rem;
 }
 
+/* FOTO CHI SIAMO */
+.chi-photo{
+  margin:2rem auto;
+  max-width:420px;
+}
+.chi-photo img{
+  width:100%;
+  border-radius:18px;
+  display:block;
+  object-fit:cover;
+  box-shadow:0 10px 24px rgba(0,0,0,.18);
+}
+.chi-photo-bottom{
+  margin-top:3rem;
+}
+
+/* CHI SIAMO – MOBILE */
 @media (max-width:750px){
   .chi-container{
+    max-width:100%;
+    padding:0 1.4rem;
     text-align:center;
   }
 
   .chi-grid{
-    display:block;           /* niente griglia, solo colonna unica */
+    display:block;
     margin-top:1.8rem;
   }
 
-  .chi-grid section{
-    margin-bottom:1.8rem;
-    text-align:center;       /* titoli + testi centrati */
-  }
-
+  .chi-grid section,
   .chi-section-full{
     text-align:center;
-  }
-}
-/* FOTO CHI SIAMO */
-.chi-photo{
-  margin: 2rem auto;
-  max-width: 420px;   /* FOTO PIÙ PICCOLA */
-}
-
-.chi-photo img{
-  width: 100%;
-  border-radius: 18px;
-  display: block;
-  object-fit: cover;
-  box-shadow: 0 10px 24px rgba(0,0,0,.18);  /* ombra morbida */
-}
-  display: block;
-  object-fit: cover;
-}
-
-.chi-photo-bottom{
-  margin-top: 3rem;
-}
-/* FIX FOTO CHI SIAMO - FORZA DIMENSIONE SU TELEFONO */
-.chi-photo img {
-  width: 100%;
-  max-width: 350px;   /* qui decido io la dimensione MASSIMA */
-  margin: 0 auto;
-  display: block;
-  border-radius: 18px;
-/* Sistemazione pagina CHI SIAMO su mobile */
-@media (max-width: 750px){
-  .chi-container{
-    max-width: 100%;
-    padding-left: 1.4rem;
-    padding-right: 1.4rem;
-    text-align: center;      /* tutto il testo centrato nel container */
-  }
-
-  .chi-grid section{
-    text-align: center;
-  }
-
-  .chi-section-full{
-    text-align: center;
+    margin-bottom:1.8rem;
   }
 
   .chi-photo{
-    max-width: 100%;         /* la foto rispetta la larghezza del testo */
+    max-width:100%;
   }
-
   .chi-photo img{
-    max-width: 100%;
-    margin: 0 auto;
+    max-width:100%;
+    margin:0 auto;
   }
 }
-/* PAGINA DI BENVENUTO (INDEX) – VERSIONE SEMPLICE E CENTRATA */
+
+/* =========================
+   PAGINA DI BENVENUTO (index.html)
+   ========================= */
 .page-landing{
-  min-height: 100vh;
-  background: radial-gradient(circle at top, #f8f1df 0, #ffffff 55%, #f3f3f3 100%);
+  min-height:100vh;
+  background:radial-gradient(circle at top,#f8f1df 0,#ffffff 55%,#f3f3f3 100%);
 }
-
 .landing-wrapper{
-  max-width: 480px;
-  margin: 0 auto;
-  min-height: 100vh;
-  padding: 3rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;   /* centra in verticale */
-  align-items: center;       /* centra in orizzontale */
-  text-align: center;
+  max-width:480px;
+  margin:0 auto;
+  min-height:100vh;
+  padding:3rem 1.5rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
 }
-
 .landing-logo{
-  display: block;
-  margin: 0 auto 1rem;
+  display:block;
+  margin:0 auto 1rem;
 }
-
 .landing-title{
-  font-size: 2rem;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  margin-bottom: .4rem;
+  font-size:2rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:.4rem;
 }
-
 .landing-tagline{
-  font-size: .95rem;
-  margin-bottom: 1.7rem;
+  font-size:.95rem;
+  margin-bottom:1.7rem;
 }
-
 .landing-nav{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: .7rem;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.7rem;
 }
-
 .landing-nav a{
-  text-decoration: none;
-  padding: .5rem 1.2rem;
-  border-radius: 999px;
-  border: 1px solid rgba(0,0,0,.12);
-  background: #ffffffc9;
-  font-size: .9rem;
+  text-decoration:none;
+  padding:.5rem 1.2rem;
+  border-radius:999px;
+  border:1px solid rgba(0,0,0,.12);
+  background:#ffffffc9;
+  font-size:.9rem;
 }
-
 .landing-nav a:hover{
-  background: #f5e8c5;
+  background:#f5e8c5;
 }
 
-  .esibizione-card{
-    padding:1.4rem 1.1rem 1.6rem;
-  }
-}
-/* PAGINA LE NOSTRE ESIBIZIONI - RESET SEMPLICE */
+/* =========================
+   PAGINA LE NOSTRE ESIBIZIONI
+   ========================= */
 .esibizioni-container{
-  max-width: 900px;
-  text-align: center;
+  max-width:900px;
+  text-align:center;
 }
 
 /* FOTO ESIBIZIONI */
 .esibizioni-photo{
-  margin: 2rem auto 2.5rem;
+  margin:2rem auto 2.5rem;
 }
-
 .esibizioni-photo img{
-  width: 100%;
-  max-width: 520px;   /* larghezza simile al testo */
-  border-radius: 16px;
-  display: block;
-  margin: 0 auto;
-  object-fit: cover;
-  box-shadow: 0 12px 30px rgba(0,0,0,.16);
+  width:100%;
+  max-width:520px;
+  border-radius:16px;
+  display:block;
+  margin:0 auto;
+  object-fit:cover;
+  box-shadow:0 12px 30px rgba(0,0,0,.16);
 }
 
-/* BOX PROSSIMA ESIBIZIONE */
+/* CARD PROSSIMA ESIBIZIONE */
 .esibizione-card{
-  background: #ffffffd9;
-  border-radius: 18px;
-  padding: 1.7rem 1.4rem 1.9rem;
-  box-shadow: 0 10px 28px rgba(0,0,0,.12);
-  margin-bottom: 2.2rem;
+  background:#ffffffd9;
+  border-radius:18px;
+  padding:1.7rem 1.4rem 1.9rem;
+  box-shadow:0 10px 28px rgba(0,0,0,.12);
+  margin-bottom:2.2rem;
 }
-
 .badge{
-  display: inline-block;
-  font-size: .8rem;
-  text-transform: uppercase;
-  letter-spacing: .14em;
-  opacity: .8;
-  margin-bottom: .4rem;
+  display:inline-block;
+  font-size:.8rem;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  opacity:.8;
+  margin-bottom:.4rem;
 }
-
 .esibizione-card h2{
-  margin-top: 0.2rem;
+  margin-top:.2rem;
 }
-
 .esibizione-card p{
-  line-height: 1.7;
-  margin-top: 0.8rem;
+  line-height:1.7;
+  margin-top:.8rem;
 }
-
-/* SEZIONE NUOVE DATE */
 .esibizione-info p{
-  line-height: 1.7;
-}
-/* BOTTONE PRENOTA - PAGINA ESIBIZIONI */
-.evento-bottone{
-  margin-top: 1.2rem;
-  text-align: center;
+  line-height:1.7;
 }
 
-.btn-prenota{
-  display: inline-block;
-  padding: 0.7rem 1.8rem;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-  border: none;
-  background: linear-gradient(135deg, #d4af37, #f5e4a3);
-  color: #1b1b1b;
-  box-shadow: 0 8px 20px rgba(0,0,0,.18);
-}
-
-.btn-prenota:hover{
-  filter: brightness(0.96);
-}
-/* ICONA WHATSAPP NEL BOTTONE */
-.wa-icon{
-  width: 14px;
-  height: 14px;
-  margin-right: 6px;
-  vertical-align: middle;
-  border-radius: 4px;
-}
-
-/* Aggiorno stile bottone */
-.btn-prenota{
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 0.9rem 2rem;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  background: linear-gradient(135deg, #d9b84a, #f5eac4);
-  color: #1e1b14;
-  box-shadow: 0 6px 18px rgba(0,0,0,.18);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.btn-prenota:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,0,0,.22);
-  filter: brightness(0.97);
-}
-/* ---- PAGINA CONTATTI ---- */
-
-.page-contatti {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.page-contatti h1 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-/* Testo introduttivo */
-.page-contatti .intro {
-  max-width: 550px;
-  margin: 0 auto 35px auto;
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
-}
-
-/* Box con i contatti */
-.contatti-box {
-  background: #ffffff;
-  padding: 30px 25px;
-  border-radius: 12px;
-  max-width: 430px;
-  margin: 0 auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Riga contatto */
-.contatto-riga {
-  font-size: 18px;
-  margin: 15px 0;
-  color: #333;
-}
-
-/* Link email */
-.contatto-riga a {
-  text-decoration: none;
-  color: #5E3CBC;
-  font-weight: 500;
-}
-
-.contatto-riga a:hover {
-  color: #c2a24d;
-}
-
-/* Pulsante WhatsApp */
-.btn-prenota{
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 0.9rem 2rem;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  background: linear-gradient(135deg, #d9b84a, #f5eac4);
-  color: #1e1b14;
-  box-shadow: 0 6px 18px rgba(0,0,0,.18);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.btn-prenota:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,0,0,.22);
-  filter: brightness(0.97);
-}
-
-.wa-icon{
-  width: 14px;
-  height: 14px;
-  margin-right: 6px;
-  vertical-align: middle;
-}
+/* BOTTONE PRENOTA / WHATSAPP */
+.evento-bottone,
 .contatti-bottone{
-  margin-top: 24px;
-  text-align: center;
+  margin-top:1.2rem;
+  text-align:center;
 }
-/* SEZIONE TRAILER IN MEDIA */
-
-.trailer-hero{
-  margin: 2.5rem auto 2.5rem;
-  padding: 2rem 1.5rem 2.3rem;
-  border-radius: 20px;
-  background: radial-gradient(circle at top, #f5e5b8 0, #f9f2dd 40%, #ffffff 85%);
-  text-align: center;
-  box-shadow: 0 12px 30px rgba(0,0,0,.16);
+.btn-prenota{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:.9rem 2rem;
+  border-radius:50px;
+  font-size:1rem;
+  font-weight:600;
+  text-decoration:none;
+  background:linear-gradient(135deg,#d9b84a,#f5eac4);
+  color:#1e1b14;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);
+  transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;
+  border:none;
 }
-
-.trailer-hero h2{
-  margin-bottom: .5rem;
+.btn-prenota:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(0,0,0,.22);
+  filter:brightness(.97);
 }
-
-.trailer-subtitle{
-  margin-bottom: 1.5rem;
-  font-size: .95rem;
-}
-
-.trailer-video-wrapper{
-  display: flex;
-  justify-content: center;
-}
-
-.trailer-video-wrapper video{
-  width: 100%;
-  max-width: 720px;
-  border-radius: 16px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.2);
-}
-/* ======== NAVIGATION (MENU) ======== */
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2.2rem;
-  padding: 1.4rem 0;
-width: 100%;
-  /* sfondo “foglie” oro-perla + leggero movimento */
-  background: linear-gradient(135deg, #f7f2e8, #e6d9b8, #f7f2e8);
-  background-size: 200% 200%;
-  animation: goldShimmer 10s infinite alternate ease-in-out;
-  border-bottom: 1px solid rgba(176, 138, 69, 0.25);
+.wa-icon{
+  width:14px;
+  height:14px;
+  margin-right:6px;
+  vertical-align:middle;
+  border-radius:4px;
 }
 
-/* testo del menu color oro */
-nav a {
-  color: #bfa063; /* oro elegante */
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1.05rem;
-  letter-spacing: .4px;
-  transition: all .25s ease;
+/* =========================
+   PAGINA CONTATTI
+   ========================= */
+.page-contatti-main{
+  text-align:center;
+  padding:40px 20px;
 }
-
-/* quando ci passi sopra: oro più luminoso */
-nav a:hover {
-  color: #e6c46b;
-  transform: scale(1.08);
+.page-contatti-main h1{
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:20px;
 }
-/* Link attivo nel menu */
-nav a.active {
-  color: #e6c46b;
-  font-weight: 700;
-  border-bottom: 2px solid #e6c46b;
-/* Effetto underline animato */
-nav a {
-  position: relative;
+.page-contatti-main .intro{
+  max-width:550px;
+  margin:0 auto 35px;
+  font-size:16px;
+  color:#555;
+  line-height:1.6;
 }
-
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
-  background-color: #e6c46b;
-  transition: width 0.3s ease-in-out;
+.contatti-box{
+  background:#ffffff;
+  padding:30px 25px;
+  border-radius:12px;
+  max-width:430px;
+  margin:0 auto;
+  box-shadow:0 4px 12px rgba(0,0,0,.1);
 }
-
-/* Quando passi con il mouse: underline animato */
-nav a:hover::after {
-  width: 100%;
+.contatto-riga{
+  font-size:18px;
+  margin:15px 0;
+  color:#333;
 }
-
-/* Quando la pagina è attiva: underline fisso */
-nav a.active::after {
-  width: 100%;
+.contatto-riga a{
+  text-decoration:none;
+  color:#5e3cbc;
+  font-weight:500;
 }
-  /* Sfondo barra menu con effetto oro perlato */
-header {
-  background: linear-gradient(135deg, #f7f2e8, #e6d9b8, #f7f2e8);
-  background-size: 200% 200%;
-  animation: goldShimmer 6s infinite alternate ease-in-out;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(176, 138, 69, 0.25);
-}
-@media (max-width: 768px) {
-  nav a {
-    color: #bfa063 !important;
-  }
-
-  nav a.active {
-    color: #e6c46b !important;
-  }
-}
-}
-/* ======== FOOTER ======== */
-
-footer {
-  text-align: center;
-  padding: 2rem 1.5rem;
-  margin-top: 3.5rem;
-  font-size: .92rem;
-  color: #b08d2a;
-  border-top: 1px solid rgba(168, 134, 37, 0.45);
-}
-
-footer strong {
-  font-weight: 700;
-  color: #8c6e1d;
-}
-
-footer p:last-child {
-  margin-top: 10px;
-  font-size: .8rem;
-  opacity: 0.75;
-}
-/* Animazione shimmer oro */
-@keyframes goldShimmer {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-/* Layout del menu sui telefoni */
-@media (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;      /* permette di andare su 2 righe */
-    gap: 1rem;            /* meno spazio tra le voci */
-    padding: 0.9rem 0 1rem;
-  }
-
-  nav a {
-    font-size: 0.95rem;   /* testo leggermente più piccolo */
-  }
-}
-/* SISTEMA IL MENU SUL CELLULARE */
-@media (max-width: 768px) {
-  nav {
-    width: 100%;
-    flex-wrap: wrap;           /* fa andare il menu su 2 righe se serve */
-    justify-content: center;   /* centra le voci */
-    gap: 0.8rem;
-    padding: 0.8rem 0 1rem;
-  }
-
-  nav a {
-    font-size: 0.9rem;         /* un filo più piccolo per farci stare tutto */
-  }
-}
-/* FIX MENU MOBILE: mostra sempre "Home" */
-nav a:first-child {
-  display: inline-block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  width: auto !important;
-}
-@media(max-width: 768px) {
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center !important;
-    text-align: center;
-  }
-
-  nav a {
-    flex: none;
-    min-width: fit-content;
-  }
-}
-/* ====== RESET COMPLETO MENU (DESKTOP + MOBILE) ====== */
-
-/* Barra in alto con sfondo oro-perla */
-.site-header {
-  background: linear-gradient(135deg, #f7f2e8, #e6d9b8, #f7f2e8);
-  background-size: 200% 200%;
-  animation: goldShimmer 14s ease-in-out infinite;
-  border-bottom: 1px solid rgba(176, 138, 69, 0.25);
-}
-
-/* Contenitore del menu (logo + voci) */
-.nav {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  padding: 0.7rem 1.5rem;
-}
-
-/* Logo + scritta Divino Amore */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  text-decoration: none;
-  color: #bfa063;
-}
-
-.brand-text {
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-/* Lista delle voci: Home, Chi siamo, ecc. */
-.menu {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-  margin: 0;
-  padding: 0;
-}
-
-/* Link del menu */
-.menu a {
-  color: #bfa063;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1rem;
-  letter-spacing: 0.4px;
-  transition: all 0.25s ease;
-}
-
-/* Hover */
-.menu a:hover {
-  color: #e3c98a;
-  transform: scale(1.05);
-}
-
-/* Pagina attiva */
-.menu a.active {
-  color: #e6c46b;
-  font-weight: 700;
-}
-
-/* Underline animata elegante */
-.menu a {
-  position: relative;
-}
-
-.menu a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
-  background-color: #e6c46b;
-  transition: width 0.3s ease-in-out;
-}
-
-.menu a:hover::after,
-.menu a.active::after {
-  width: 100%;
-}
-
-/* Animazione luce oro sulla barra */
-@keyframes goldShimmer {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-
-/* ====== VERSIONE MENU SU CELLULARE ====== */
-
-@media (max-width: 768px) {
-
-  .nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.7rem;
-    padding: 0.9rem 1rem 1.1rem;
-  }
-
-  .menu {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.9rem 1.4rem;
-  }
-
-  .menu a {
-    font-size: 0.95rem;
-  }
+.contatto-riga a:hover{
+  color:#c2a24d;
 }
