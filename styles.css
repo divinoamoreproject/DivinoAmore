@@ -344,11 +344,20 @@ ul li{
 }
 
 @media (max-width:750px){
-  .chi-grid{
-    grid-template-columns:1fr;
+  .chi-container{
     text-align:center;
   }
-  .chi-grid h2,
+
+  .chi-grid{
+    display:block;           /* niente griglia, solo colonna unica */
+    margin-top:1.8rem;
+  }
+
+  .chi-grid section{
+    margin-bottom:1.8rem;
+    text-align:center;       /* titoli + testi centrati */
+  }
+
   .chi-section-full{
     text-align:center;
   }
