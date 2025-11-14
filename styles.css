@@ -475,24 +475,20 @@ ul li{
   max-width:900px;
 }
 
-.esibizioni-photo{
-  margin:2rem auto 2.5rem;
-  max-width:750px;
-}
-.esibizioni-photo{
-  text-align:center;
-  margin: 1.5rem auto 2rem;
+/* FOTO PAGINA LE NOSTRE ESIBIZIONI */
+.esibizioni-photo {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
 }
 
-.esibizioni-photo img{
-  width:50%;
-  max-width:420px;
-  border-radius:18px;
-  display:inline-block;
-  object-fit:cover;
-  box-shadow:0 12px 30px rgba(0,0,0,.14);
+.esibizioni-photo img {
+  width: 100%;
+  max-width: 420px; /* stessa dimensione della sezione "Chi siamo" */
+  border-radius: 12px;
+  margin: 0 auto;
+  display: block;
 }
-
 
 .esibizione-card{
   background:#ffffffd9;
