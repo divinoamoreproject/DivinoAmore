@@ -469,76 +469,7 @@ ul li{
 .landing-nav a:hover{
   background: #f5e8c5;
 }
-/* PAGINA LE NOSTRE ESIBIZIONI */
 
-.esibizioni-container{
-  max-width:900px;
-}
-
-.esibizioni-photo {
-  display: flex;
-  justify-content: center;
-  margin: 40px 0;
-}
-
-.esibizioni-photo img {
-  width: 100%;
-  max-width: 420px; /* stessa dimensione della sezione "Chi siamo" */
-  border-radius: 12px;
-  margin: 0 auto;
-  display: block;
-}
-
-.esibizione-card{
-  background:#ffffffd9;
-  border-radius:18px;
-  padding:1.7rem 1.4rem 1.9rem;
-  box-shadow:0 10px 28px rgba(0,0,0,.12);
-  margin-bottom:2.2rem;
-}
-
-.badge{
-  display:inline-block;
-  font-size:.8rem;
-  text-transform:uppercase;
-  letter-spacing:.14em;
-  opacity:.8;
-  margin-bottom:.4rem;
-}
-
-.esibizione-details{
-  margin:1rem 0 1.4rem;
-}
-
-.esibizione-details div{
-  display:flex;
-  gap:.5rem;
-  font-size:.9rem;
-  margin-bottom:.2rem;
-}
-
-.esibizione-details dt{
-  font-weight:600;
-  min-width:3.5rem;
-}
-
-.esibizione-details dd{
-  margin:0;
-}
-
-.esibizione-card p{
-  line-height:1.7;
-}
-
-.esibizione-info{
-  margin-top:1.5rem;
-}
-
-.esibizione-info p{
-  line-height:1.7;
-}
-
-@media (max-width:700px){
   .esibizione-card{
     padding:1.4rem 1.1rem 1.6rem;
   }
