@@ -696,22 +696,24 @@ ul li{
 nav {
   display: flex;
   justify-content: center;
-  gap: 1.3rem;
-  padding: 1.3rem;
-  border-bottom: 1px solid rgba(168, 134, 37, 0.45);
+  gap: 2.2rem;
+  padding: 1.4rem 0;
 }
 
+/* testo del menu color oro */
 nav a {
-  color: #b08d2a; /* oro più intenso */
+  color: #bfa063; /* oro elegante */
   font-weight: 600;
   text-decoration: none;
+  font-size: 1.05rem;
+  letter-spacing: .4px;
   transition: all .25s ease;
-  letter-spacing: .3px;
 }
 
+/* quando ci passi sopra: oro più luminoso */
 nav a:hover {
-  color: #e1c46b; /* effetto oro chiaro in hover */
-  transform: scale(1.05);
+  color: #e3c98a;
+  transform: scale(1.08);
 }
 
 
