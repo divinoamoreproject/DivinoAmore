@@ -293,3 +293,63 @@ ul li{
   font-size:.95rem;
   color:var(--muted);
   text-align:center;
+/* --- PAGINA CHI SIAMO --- */
+
+.chi-container{
+  max-width:900px;
+}
+
+.intro-lead{
+  font-size:1rem;
+  line-height:1.7;
+  margin-bottom:1rem;
+}
+
+.chi-grid{
+  margin-top:2rem;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:2rem;
+  text-align:left;
+}
+
+.chi-grid h2{
+  text-align:left;
+}
+
+.chi-grid p{
+  line-height:1.7;
+}
+
+.chi-section-full{
+  margin-top:2.5rem;
+  text-align:left;
+}
+
+.chi-section-full p{
+  line-height:1.7;
+}
+
+.chi-quote{
+  margin-top:2.5rem;
+  font-style:italic;
+  font-size:.95rem;
+  color:var(--muted);
+}
+
+.chi-quote span{
+  display:block;
+  margin-top:.3rem;
+  font-size:.85rem;
+}
+
+@media (max-width:750px){
+  .chi-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+  .chi-grid h2,
+  .chi-section-full{
+    text-align:center;
+  }
+}
