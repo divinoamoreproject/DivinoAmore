@@ -712,10 +712,14 @@ nav a {
 
 /* quando ci passi sopra: oro più luminoso */
 nav a:hover {
-  color: #e3c98a;
+  color: #e6c46b;
   transform: scale(1.08);
 }
-
+/* Link attivo nel menu */
+nav a.active {
+  color: #e6c46b;
+  font-weight: 700;
+  border-bottom: 2px solid #e6c46b;
 
 /* ======== FOOTER ======== */
 
