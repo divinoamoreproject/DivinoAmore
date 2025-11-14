@@ -31,7 +31,9 @@ body{
 /* BACKGROUND PER PAGINA (class sul <body>) */
 body.home-page{background:var(--bg-home);}
 body.page-chi{background:var(--bg-chi);}
-body.page-esibizioni{background:var(--bg-esibizioni);}
+body.page-esibizioni{
+  background: linear-gradient(135deg, #f7f2e8, #e6d9b8, #f7f2e8);
+}
 body.page-media{background:var(--bg-media);}
 body.page-dona{background:var(--bg-dona);}
 body.page-contatti{background:var(--bg-contatti);}
