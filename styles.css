@@ -382,3 +382,10 @@ ul li{
 .chi-photo-bottom{
   margin-top: 3rem;
 }
+/* FIX FOTO CHI SIAMO - FORZA DIMENSIONE SU TELEFONO */
+.chi-photo img {
+  width: 100%;
+  max-width: 350px;   /* qui decido io la dimensione MASSIMA */
+  margin: 0 auto;
+  display: block;
+  border-radius: 18px;
