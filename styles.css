@@ -751,4 +751,8 @@ header nav a:hover {
 .contatto-riga {
   color: #6d5b3f;
 }
-
+/* SFONDO PIÙ ELEGANTE SOLO PER LA PAGINA CONTATTI */
+.page-contatti-main {
+  background: radial-gradient(circle at top, #f8f1df 0, #ffffff 55%, #f3f3f3 100%);
+  padding-bottom: 60px;
+}
