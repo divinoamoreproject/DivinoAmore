@@ -353,3 +353,18 @@ ul li{
     text-align:center;
   }
 }
+/* FOTO CHI SIAMO */
+.chi-photo{
+  margin:2rem auto;
+  max-width:900px;
+}
+.chi-photo img{
+  width:100%;
+  border-radius:18px;
+  box-shadow:0 14px 40px rgba(0,0,0,.22);
+  display:block;
+  object-fit:cover;
+}
+.chi-photo-bottom{
+  margin-top:2.5rem;
+}
