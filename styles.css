@@ -698,7 +698,7 @@ nav {
   justify-content: center;
   gap: 2.2rem;
   padding: 1.4rem 0;
-
+width: 100%;
   /* sfondo “foglie” oro-perla + leggero movimento */
   background: linear-gradient(135deg, #f7f2e8, #e6d9b8, #f7f2e8);
   background-size: 200% 200%;
@@ -794,3 +794,15 @@ footer p:last-child {
 @keyframes goldShimmer {
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
+/* Layout del menu sui telefoni */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;      /* permette di andare su 2 righe */
+    gap: 1rem;            /* meno spazio tra le voci */
+    padding: 0.9rem 0 1rem;
+  }
+
+  nav a {
+    font-size: 0.95rem;   /* testo leggermente più piccolo */
+  }
+}
