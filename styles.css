@@ -756,3 +756,14 @@ header nav a:hover {
   background: radial-gradient(circle at top, #f8f1df 0, #ffffff 55%, #f3f3f3 100%);
   padding-bottom: 60px;
 }
+/* --- Fix allineamento pagina Contatti --- */
+.page-contatti,
+.page-contatti * {
+  text-align: center;
+}
+
+.page-contatti .intro {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
