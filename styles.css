@@ -548,3 +548,32 @@ ul li{
 .btn-prenota:hover{
   filter: brightness(0.96);
 }
+/* ICONA WHATSAPP NEL BOTTONE */
+.wa-icon{
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Aggiorno stile bottone */
+.btn-prenota{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(135deg, #d9b84a, #f5eac4);
+  color: #1e1b14;
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.btn-prenota:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.22);
+  filter: brightness(0.97);
+}
