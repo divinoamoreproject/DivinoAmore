@@ -806,3 +806,17 @@ footer p:last-child {
     font-size: 0.95rem;   /* testo leggermente più piccolo */
   }
 }
+/* SISTEMA IL MENU SUL CELLULARE */
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    flex-wrap: wrap;           /* fa andare il menu su 2 righe se serve */
+    justify-content: center;   /* centra le voci */
+    gap: 0.8rem;
+    padding: 0.8rem 0 1rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;         /* un filo più piccolo per farci stare tutto */
+  }
+}
