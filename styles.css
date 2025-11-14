@@ -662,3 +662,47 @@ ul li{
 .contatto-riga a:hover{
   color:#c2a24d;
 }
+/* MENU SEMPLICE – ADATTO ALL'HTML ATTUALE */
+
+/* Barra superiore */
+header{
+  background: linear-gradient(135deg, #f7f2e8, #e6d9b8, #f7f2e8);
+  border-bottom: 1px solid rgba(176,138,69,0.25);
+}
+
+/* Contenitore del menu */
+header nav{
+  display: flex;
+  justify-content: center;
+  padding: 0.9rem 0 1rem;
+}
+
+/* Lista voci */
+header nav ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem 1.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Link */
+header nav a{
+  color: #bfa063;          /* oro morbido */
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.4px;
+}
+
+/* Evita il viola dopo il click */
+header nav a:visited{
+  color: #bfa063;
+}
+
+/* Hover */
+header nav a:hover{
+  color: #e3c98a;
+}
