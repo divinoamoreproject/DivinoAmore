@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Divino Amore Project – The Gospel through dance, art and solidarity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <meta name="theme-color" content="#d4af37">
+  </head>
+  <body class="home-page">
+    <!-- HEADER / MENU -->
+    <header>
+      <nav>
+        <a href="../index.html">Home (IT)</a>
+        <a href="index.html" class="active">Home (EN)</a>
+        <a href="../le-nostre-esibizioni.html">Performances</a>
+        <a href="../media.html">Media</a>
+        <a href="../dona.html">Donate</a>
+        <a href="../contatti.html">Contact</a>
+
+        <!-- Language selector -->
+        <div class="language-selector">
+          🌍 Language ▾
+          <ul>
+            <li><a href="../index.html">🇮🇹 Italiano</a></li>
+            <li><a href="index.html">🇺🇸 English</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <img src="../assets/logo.png"
+             alt="Divino Amore logo"
+             class="hero-logo">
+        <h1 class="hero-title">DIVINO AMORE PROJECT</h1>
+        <p class="hero-subtitle">
+          The Gospel through dance, art and solidarity.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION: INTRO FOR US AUDIENCE -->
+    <main class="section">
+      <div class="container">
+        <h2>What is Divino Amore?</h2>
+        <p>
+          Divino Amore is a faith-based dance project born in Rome, Italy.
+          We bring the message of the Gospel into streets, churches and theatres
+          through contemporary dance, live music and powerful testimonies.
+        </p>
+
+        <div class="donation-grid">
+          <div class="donation-card">
+            <h2>Faith in motion</h2>
+            <p>
+              Every choreography is inspired by the Bible and by real stories
+              of grace, healing and inner freedom.
+            </p>
+          </div>
+
+          <div class="donation-card">
+            <h2>Art that serves</h2>
+            <p>
+              We use dance and the performing arts to create spaces of
+              listening, beauty and encounter for all generations.
+            </p>
+          </div>
+
+          <div class="donation-card">
+            <h2>Love in action</h2>
+            <p>
+              Part of the project is dedicated to concrete solidarity:
+              supporting people in need through offerings and charity actions.
+            </p>
+          </div>
+        </div>
+
+        <p style="margin-top:2rem;">
+          If you would like to host <strong>Divino Amore</strong> in your parish,
+          city or event, you can contact us through the Italian
+          <a href="../contatti.html">contact page</a> or by WhatsApp.
+        </p>
+      </div>
+    </main>
+
+    <!-- FOOTER (riuso quello italiano) -->
+    <footer>
+      <p><strong>Divino Amore – “Love your neighbor as yourself”</strong></p>
+      <p>©️ 2025 Divino Amore Project – All rights reserved.</p>
+    </footer>
+
+    <!-- piccolo script per aprire/chiudere il menu lingue -->
+    <script>
+      const lang = document.querySelector('.language-selector');
+      if (lang) {
+        lang.addEventListener('click', () => {
+          lang.classList.toggle('active');
+        });
+      }
+    </script>
+  </body>
+</html>
