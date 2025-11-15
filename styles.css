@@ -767,3 +767,40 @@ header nav a:hover {
   margin-right: auto;
   text-align: center;
 }
+.language-selector{
+  cursor: pointer;
+  color: #bfa063;
+  font-weight: bold;
+  margin-left: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.language-selector ul{
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.language-selector.active ul{
+  display: block;
+}
+
+.language-selector ul li{
+  margin: 5px 0;
+}
+
+.language-selector a{
+  text-decoration: none;
+  color: #bfa063;
+}
+
+.language-selector a:hover{
+  color: #e3c98a;
+}
