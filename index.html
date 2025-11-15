@@ -18,6 +18,14 @@
   <a href="media.html">Media</a>
   <a href="dona.html">Dona</a>
   <a href="contatti.html">Contatti</a>
+<!-- LANGUAGE DROPDOWN -->
+  <div class="language-selector">
+    🌍 Language ▾
+    <ul>
+      <li><a href="index.html">🇮🇹 Italiano</a></li>
+      <li><a href="en/index.html">🇺🇸 English</a></li>
+    </ul>
+  </div>
 </nav>
 </header>
 <main>
@@ -64,6 +72,11 @@
   </div>
 </footer>
 <script src="script.js" defer></script>
-
+<script>
+  const lang = document.querySelector('.language-selector');
+  lang.addEventListener('click', () => {
+    lang.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
