@@ -896,3 +896,18 @@ header nav a:hover {
   text-shadow: 0 0 8px rgba(199,169,105,0.45);
   transition: 0.3s ease;
 }
+/* ==== TESTO INTERNO RISORSE ==== */
+
+.page-risorse p,
+.page-risorse li,
+.page-risorse article {
+  color: #6e6a57;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin-bottom: 1rem;
+}
+.page-risorse .messaggio {
+  background: linear-gradient(90deg, rgba(199,169,105,0.18), rgba(110,106,87,0.1));
+  padding: 1rem 1.3rem;
+  border-radius: 8px;
+}
