@@ -832,9 +832,12 @@ header nav a:hover {
   padding: 1.8rem 1.6rem 2rem;
   margin-top: 2rem;
   box-shadow: 0 10px 26px rgba(0,0,0,.08);
-  text-align: left;
 }
-
+/* Testo dei box: giustificato */
+.page-risorse .chi-section-full p,
+.page-risorse .chi-section-full li{
+  text-align: justify;
+}
 /* Titoli delle sezioni */
 .page-risorse .chi-section-full h2{
   margin-top: 0;
