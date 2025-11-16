@@ -931,3 +931,12 @@ body.page-risorse{
     padding: 1.4rem 1.2rem 1.7rem;
   }
 }
+/* Rimuove eventuali margini duplicati del vecchio layout */
+.resources-section p {
+  margin-bottom: 0;
+}
+
+/* Distanza tra i box */
+.resource-card {
+  margin-bottom: 2.2rem;
+}
