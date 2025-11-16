@@ -807,109 +807,127 @@ header nav a:hover {
   color: #e3c98a;
 }
 /* ====== PAGINA RISORSE ====== */
-
-.page-risorse .container{
-  max-width: 900px;
+body.page-risorse{
+  /* stesso mood caldo del sito */
+  background: radial-gradient(circle at top, #f8f1df 0, #ffffff 55%, #f3f3f3 100%);
 }
 
-/* Titolo principale */
-.page-risorse h1{
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Intro iniziale */
-.page-risorse .intro-lead{
-  max-width: 720px;
-  margin: 0.5rem auto 2.2rem;
-  line-height: 1.8;
-}
-/* ogni sezione (messaggio, film, musica) in un box morbido */
-.page-risorse .chi-section-null {
-  background: rgba(212, 175, 55, 0.18);
-  padding: 1.6rem 1.2rem;
-  margin: 1.6rem auto;
-  border-radius: 12px;
-  box-shadow: 0 10px 26px rgba(0,0,0,.08);
-}
-/* Testo dei box: giustificato */
-.page-risorse .chi-section-full p,
-.page-risorse .chi-section-full li{
-  text-align: justify;
-}
-/* Titoli delle sezioni */
-.page-risorse .chi-section-full h2{
-  margin-top: 0;
-  margin-bottom: 0.8rem;
+/* wrapper principale */
+.risorse-wrapper{
+  max-width: 860px;
+  margin: 0 auto;
   text-align: left;
 }
 
-/* Testo interno delle sezioni */
-.page-risorse .chi-section-full p{
-  line-height: 1.7;
-}
-
-/* Liste film/musica più eleganti */
-.page-risorse .chi-section-full ul{
-  list-style: none;
-  padding-left: 0;
-  margin-top: 1rem;
-}
-
-.page-risorse .chi-section-full li{
-  margin-bottom: 0.9rem;
-  padding-left: 1.4rem;
-  position: relative;
-}
-
-/* Pallino dorato davanti agli elementi lista */
-.page-risorse .chi-section-full li::before{
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0.2rem;
-  color: var(--gold);
-  font-size: 1.1rem;
-}
-
-/* Frase di "hint" in piccolo */
-.page-risorse .hint{
-  font-size: 0.9rem;
-  color: var(--muted);
-  margin-top: 0.8rem;
-}
-
-/* Piccolo respiro in basso su mobile */
-@media (max-width: 750px){
-  .page-risorse .chi-section-full{
-    padding: 1.5rem 1.3rem 1.7rem;
-  }
-}
-/* ==== TITOLI RISORSE (STILE ORO UNIFORME) ==== */
-
-.page-risorse h2 {
-  color: #c7a969;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  letter-spacing: 0.6px;
+/* titolo pagina */
+.risorse-title{
+  font-size: 2rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
   text-align: center;
-}
-.page-risorse h2:hover {
-  text-shadow: 0 0 8px rgba(199,169,105,0.45);
-  transition: 0.3s ease;
-}
-/* ==== TESTO INTERNO RISORSE ==== */
-
-.page-risorse p,
-.page-risorse li,
-.page-risorse article {
-  color: #6e6a57;
-  font-size: 1.05rem;
-  line-height: 1.55;
   margin-bottom: 1rem;
 }
-.page-risorse .messaggio {
-  background: linear-gradient(90deg, rgba(199,169,105,0.18), rgba(110,106,87,0.1));
-  padding: 1rem 1.3rem;
-  border-radius: 8px;
+
+/* sottotitolo intro */
+.risorse-intro{
+  max-width: 640px;
+  margin: 0.2rem auto 2.4rem;
+  text-align: center;
+  font-size: .98rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* box singolo (messaggio, film, musica) */
+.resource-card{
+  position: relative;
+  margin: 1.9rem auto 0;
+  padding: 1.7rem 1.5rem 1.9rem;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(212,175,55,0.16),
+    rgba(255,255,255,0.92)
+  );
+  border: 1px solid rgba(212,175,55,0.35);
+  box-shadow: 0 14px 30px rgba(0,0,0,.12);
+  overflow: hidden;
+}
+
+/* leggera “luce” dorata nell’angolo */
+.resource-card::before{
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at 0 0, rgba(255,255,255,0.65), transparent 60%);
+  opacity: .55;
+  pointer-events: none;
+}
+
+/* etichetta in alto (Messaggio del giorno, Film, Musica…) */
+.resource-tag{
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--muted);
+  margin: 0 0 .4rem;
+}
+
+/* titolo del box */
+.resource-card h2{
+  margin: 0 0 .8rem;
+  font-size: 1.35rem;
+  letter-spacing: .04em;
+}
+
+/* testo interno elegante */
+.resource-text{
+  font-size: .98rem;
+  line-height: 1.9;
+  color: var(--dark);
+  margin-bottom: .9rem;
+}
+
+/* citazione / frase forte */
+.resource-quote{
+  margin: .4rem 0 .9rem;
+  padding-left: 1rem;
+  border-left: 3px solid rgba(212,175,55,0.7);
+  font-style: italic;
+  font-size: .95rem;
+  color: var(--muted);
+}
+
+/* nota finale piccola */
+.resource-footnote{
+  font-size: .83rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* variazione leggera tra i tre box (opzionale) */
+.resource-card--films{
+  background: linear-gradient(
+    135deg,
+    rgba(212,175,55,0.12),
+    rgba(255,255,255,0.96)
+  );
+}
+
+.resource-card--music{
+  background: linear-gradient(
+    135deg,
+    rgba(212,175,55,0.18),
+    rgba(255,255,255,0.94)
+  );
+}
+
+/* responsive: stringiamo un po' su mobile */
+@media (max-width: 700px){
+  .risorse-wrapper{
+    padding: 0 .4rem;
+  }
+  .resource-card{
+    padding: 1.4rem 1.2rem 1.7rem;
+  }
 }
