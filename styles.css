@@ -12,6 +12,7 @@
   --bg-chi:#f5f4ff;
   --bg-esibizioni:#f7e28b;
   --bg-media:#f3f9ff;
+  --bg-risorse:#f5f6ff
   --bg-dona:#fff8ea;
   --bg-contatti:#f4fff7;
   --bg-privacy:#f8f8f8;
@@ -36,6 +37,7 @@ body.page-esibizioni
 background: linear-gradient(135deg, #f7f2e8, #e6d9b8, #f7f2e8);
 }
 body.page-media{background:var(--bg-media);}
+body.page-risorse{background:var(--bg-risorse);}
 body.page-dona{background:var(--bg-dona);}
 body.page-contatti{background:var(--bg-contatti);}
 body.page-privacy{background:var(--bg-privacy);}
@@ -803,4 +805,81 @@ header nav a:hover {
 
 .language-selector a:hover{
   color: #e3c98a;
+}
+/* ====== PAGINA RISORSE ====== */
+
+.page-risorse .container{
+  max-width: 900px;
+}
+
+/* Titolo principale */
+.page-risorse h1{
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Intro iniziale */
+.page-risorse .intro-lead{
+  max-width: 720px;
+  margin: 0.5rem auto 2.2rem;
+  line-height: 1.8;
+}
+
+/* Ogni sezione (messaggio, film, musica) in un box morbido */
+.page-risorse .chi-section-full{
+  background: #ffffffd9;
+  border-radius: 18px;
+  padding: 1.8rem 1.6rem 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+  text-align: left;
+}
+
+/* Titoli delle sezioni */
+.page-risorse .chi-section-full h2{
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+/* Testo interno delle sezioni */
+.page-risorse .chi-section-full p{
+  line-height: 1.7;
+}
+
+/* Liste film/musica più eleganti */
+.page-risorse .chi-section-full ul{
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.page-risorse .chi-section-full li{
+  margin-bottom: 0.9rem;
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+/* Pallino dorato davanti agli elementi lista */
+.page-risorse .chi-section-full li::before{
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+
+/* Frase di "hint" in piccolo */
+.page-risorse .hint{
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.8rem;
+}
+
+/* Piccolo respiro in basso su mobile */
+@media (max-width: 750px){
+  .page-risorse .chi-section-full{
+    padding: 1.5rem 1.3rem 1.7rem;
+  }
 }
