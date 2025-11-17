@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const player = document.getElementById("radio-player");
     const message = document.getElementById("radio-message");
 
-    const isOnAir = (hours > 17 || (hours === 17 && minutes >= 0)) &&
+    const isOnAir = (hours > 5 || (hours === 5 && minutes >= 0)) &&
                     (hours < 18 || (hours === 18 && minutes <= 30));
 
     if (isOnAir) {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
       message.innerHTML = "🔴 LIVE — La Radio Divino Amore è in onda fino alle 18:30.";
     } else {
       player.style.display = "none";
-      message.innerHTML = "⏳ Torna alle 17:00 per ascoltare Radio Divino Amore.";
+      message.innerHTML = "⏳ Torna alle 5 per ascoltare Radio Divino Amore.";
     }
   }
 
