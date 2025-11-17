@@ -27,33 +27,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-<!-- SCRIPT RADIO DIVINO AMORE -->
-<script>
-// ---- RADIO DIVINO AMORE (5:00–6:30) ----
-function checkRadioSchedule() {
-  const now = new Date();
-  const hours = now.getHours();
-  const minutes = now.getMinutes();
-
-  const player  = document.getElementById("radio-player");
-  const message = document.getElementById("radio-message");
-  if (!player || !message) return;
-
-  // LIVE dalle 5:00 alle 6:30
-  const isOnAir = true;
-
-  if (isOnAir) {
-    player.style.display = "block";
-    message.innerHTML = "🔴 LIVE – Radio Divino Amore è ora in onda.";
-  } else {
-    player.style.display = "none";
-    message.innerHTML = "⏳ Torna alle 5:00 per ascoltare Radio Divino Amore.";
-  }
-}
-
-// primo controllo subito e poi ogni minuto
-checkRadioSchedule();
-setInterval(checkRadioSchedule, 60000);
-</script>
-
-
