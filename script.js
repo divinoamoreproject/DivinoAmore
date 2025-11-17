@@ -52,7 +52,7 @@ function updateLiveBanner() {
   const now = new Date();
   const hour = now.getHours();
   const minutes = now.getMinutes();
-  const isLive = (hour === 17) || (hour === 18 && minutes < 30);
+  const isLive = (hour === 5) || (hour === 18 && minutes < 30);
 
   const banner = document.getElementById("live-banner");
   if (!banner) return;
