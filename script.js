@@ -29,35 +29,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <!-- SCRIPT RADIO DIVINO AMORE -->
 <script>
-  function checkRadioSchedule() {
-    const now = new Date();
-    const hours = now.getHours();
-    const minutes = now.getMinutes();
+// ---- RADIO DIVINO AMORE (5:00–6:30) ----
+function checkRadioSchedule() {
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
 
-    // elementi della radio
-    const player = document.getElementById("radio-player");
-    const message = document.getElementById("radio-message");
-    
-   // LIVE dalle 5:00 alle 6:30
-    const isOnAir = (hours >= 5 && (hour < 6 || (hour === 6 && minutes < 30)));
+  const player  = document.getElementById("radio-player");
+  const message = document.getElementById("radio-message");
+  if (!player || !message) return;
 
-    if (isOnAir) {
-      player.style.display = "block";
-      message.innerHTML = "🔴 LIVE •  Radio Divino Amore è ora in onda (5:00–6:30).";
+  // LIVE dalle 5:00 alle 6:30
+  const isOnAir = (hours === 5) || (hours === 6 && minutes < 30);
 
-     
-    } else {
-      // Fuori orario: nascondo il player, mostro solo il messaggio
-      player.style.display = "none";
-      message.innerHTML = "⏰ Torna ogni giorno dalle 5:00 alle 6:30 per ascoltare Radio Divino Amore.";
-      }
-    }
+  if (isOnAir) {
+    player.style.display = "block";
+    message.innerHTML = "🔴 LIVE – Radio Divino Amore è ora in onda.";
+  } else {
+    player.style.display = "none";
+    message.innerHTML = "⏳ Torna alle 5:00 per ascoltare Radio Divino Amore.";
   }
+}
 
-  // Primo controllo appena la pagina è caricata
-  checkRadioSchedule();
-  // Aggiorna ogni minuto
-  setInterval(checkRadioSchedule, 60000);
+// primo controllo subito e poi ogni minuto
+checkRadioSchedule();
+setInterval(checkRadioSchedule, 60000);
 </script>
 
 
