@@ -966,27 +966,3 @@ body.page-risorse{
   50% { box-shadow: 0 0 22px rgba(212, 175, 55, 0.75); }
   100% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.35); }
 }
-/* RADIO DIVINO AMORE — stile visibile solo in orario live */
-#radio-player {
-  display: none;
-  margin-top: 18px;
-  text-align: center;
-}
-
-#radio-player audio {
-  width: 90%;
-  max-width: 400px;
-  border-radius: 12px;
-  outline: none;
-}
-
-#radio-message {
-  font-size: 1.1rem;
-  margin-top: 10px;
-  padding: 10px 14px;
-  border-radius: 12px;
-  background: rgba(255, 215, 120, 0.25);
-  border: 1px solid rgba(190, 150, 60, 0.4);
-  color: #483b19;
-  text-align: center;
-}
