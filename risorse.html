@@ -29,17 +29,27 @@
     <h1 class="risorse-title">Risorse per il cuore</h1>
     
     <p class="risorse-intro">Una pagina che cresce ogni giorno, per aiutarti a camminare con Dio attraverso arte, fede e ispirazione.</p>
-    <!-- 🔊 RADIO DIVINO AMORE -->
-    <div id="radio-section">
+   <section class="radio-section">
   <h2>📻 Radio Divino Amore</h2>
-  <p id="radio-message" style="font-style: italic; color:#bfa063;"></p>
+  <p class="radio-subtitle">
+    Ogni giorno dalle <strong>5:00</strong> alle <strong>6:30</strong> un’ora e mezza di musica e parola
+    per iniziare la giornata con il cuore rivolto a Dio.
+  </p>
 
-  <audio id="radio-player" controls autoplay preload="none" style="display:none; width:100%;">
-    <source src="https://drive.google.com/uc?export=download&id=1Ap9ve-1SfEpxgkGsor5qlDpqhrXZHPke" type="audio/mpeg">
-    Il tuo browser non supporta l'audio.
-  </audio>
-</div>
+  <!-- Messaggio che cambia in base all'orario -->
+  <div id="radio-message"
+       style="text-align:center; margin-bottom:12px; font-weight:bold;">
+  </div>
 
+  <!-- Player visibile solo durante l’orario LIVE -->
+  <div id="radio-player" style="display:none; text-align:center;">
+    <audio id="radio-audio" controls>
+      <source src="https://drive.google.com/uc?id=1Ap9ve-1SfEpxgkGsor5qlDpqhrXZHPke&export=download"
+              type="audio/mpeg">
+      Il tuo browser non supporta l’audio HTML5.
+    </audio>
+  </div>
+</section>
     <!-- MESSAGGIO DEL GIORNO -->
     <section class="resource-card">
       <p class="resource-tag">Messaggio del giorno</p>
