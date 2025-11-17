@@ -40,7 +40,7 @@ function checkRadioSchedule() {
   if (!player || !message) return;
 
   // LIVE dalle 5:00 alle 6:30
-  const isOnAir = (hours === 5) || (hours === 6 && minutes < 30);
+  const isOnAir = true;
 
   if (isOnAir) {
     player.style.display = "block";
