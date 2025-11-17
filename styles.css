@@ -940,3 +940,29 @@ body.page-risorse{
 .resource-card {
   margin-bottom: 2.2rem;
 }
+#live-banner {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #f7eeca, #d8b676, #f5e5c2);
+  color: #6b4b18;
+  border: 2px solid #c9a45d;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  animation: pulse 2s infinite ease-in-out;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.live-hidden {
+  display: none;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.35); }
+  50% { box-shadow: 0 0 22px rgba(212, 175, 55, 0.75); }
+  100% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.35); }
+}
