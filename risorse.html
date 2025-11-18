@@ -51,6 +51,116 @@
 </main>
 
 <footer> ... </footer>
+  <script>
+const weeklyData = [
+  {
+    verse: ⁠ "Il Signore è il mio pastore: non manco di nulla." — Salmo 23,1 ⁠,
+    music: [
+      ⁠ "Way Maker" – Sinach ⁠,
+      ⁠ "Oceans" – Hillsong UNITED ⁠,
+      ⁠ "How Great Is Our God" – Chris Tomlin ⁠
+    ],
+    films: [
+      ⁠ "The Chosen" (serie) ⁠,
+      ⁠ "The Shack" ⁠,
+      ⁠ "Miracles from Heaven" ⁠
+    ]
+  },
+  {
+    verse: ⁠ "Non temere, perché io sono con te." — Isaia 41,10 ⁠,
+    music: [
+      ⁠ "Graves Into Gardens" – Elevation Worship ⁠,
+      ⁠ "More Like Jesus" – Passion ⁠,
+      ⁠ "Reckless Love" – Cory Asbury ⁠
+    ],
+    films: [
+      ⁠ "Heaven Is for Real" ⁠,
+      ⁠ "Risen" ⁠,
+      ⁠ "Paul, Apostle of Christ" ⁠
+    ]
+  },
+  {
+    verse: ⁠ "Io sono la via, la verità e la vita." — Giovanni 14,6 ⁠,
+    music: [
+      ⁠ "Holy Forever" – Chris Tomlin ⁠,
+      ⁠ "What a Beautiful Name" – Hillsong Worship ⁠,
+      ⁠ "I Surrender" – Hillsong" ⁠
+    ],
+    films: [
+      ⁠ "The Star" ⁠,
+      ⁠ "The Gospel of John" ⁠,
+      ⁠ "Son of God" ⁠
+    ]
+  },
+  {
+    verse: ⁠ "Beati i puri di cuore, perché vedranno Dio." — Matteo 5,8 ⁠,
+    music: [
+      ⁠ "Goodness of God" – Bethel Music ⁠,
+      ⁠ "Firm Foundation" – Maverick City Music ⁠,
+      ⁠ "Hosanna" – Hillsong" ⁠
+    ],
+    films: [
+      ⁠ "War Room" ⁠,
+      ⁠ "Courageous" ⁠,
+      ⁠ "The Case for Christ" ⁠
+    ]
+  },
+  {
+    verse: ⁠ "Tutto posso in Colui che mi dà forza." — Filippesi 4,13 ⁠,
+    music: [
+      ⁠ "Battle Belongs" – Phil Wickham ⁠,
+      ⁠ "Raise a Hallelujah" – Bethel Music ⁠,
+      ⁠ "Lion" – Elevation Worship ⁠
+    ],
+    films: [
+      ⁠ "Unplanned" ⁠,
+      ⁠ "Breakthrough" ⁠,
+      ⁠ "Fireproof" ⁠
+    ]
+  },
+  {
+    verse: ⁠ "Il Signore è vicino a chi ha il cuore spezzato." — Salmo 34,19 ⁠,
+    music: [
+      ⁠ "Refiner" – Maverick City Music ⁠,
+      ⁠ "Come to the Altar" – Elevation Worship ⁠,
+      ⁠ "Nothing Else" – Cody Carnes ⁠
+    ],
+    films: [
+      ⁠ "I Still Believe" ⁠,
+      ⁠ "The Resurrection of Gavin Stone" ⁠,
+      ⁠ "Overcomer" ⁠
+    ]
+  },
+  {
+    verse: ⁠ "Rallegratevi sempre nel Signore!" — Filippesi 4,4 ⁠,
+    music: [
+      ⁠ "Joy" – For King & Country ⁠,
+      ⁠ "This is Amazing Grace" – Phil Wickham ⁠,
+      ⁠ "Freedom" – Jesus Culture ⁠
+    ],
+    films: [
+      ⁠ "Soul Surfer" ⁠,
+      ⁠ "Facing the Giants" ⁠,
+      ⁠ "A Week Away" ⁠
+    ]
+  }
+];
+
+// Determina il giorno della settimana (0 = domenica)
+const today = new Date().getDay();
+const todayContent = weeklyData[today];
+
+// Inserisce il contenuto
+document.getElementById("verse-text").innerText = todayContent.verse;
+
+document.getElementById("music-list").innerHTML = todayContent.music
+  .map(item => ⁠ <li>${item}</li> ⁠)
+  .join("");
+
+document.getElementById("film-list").innerHTML = todayContent.films
+  .map(item => ⁠ <li>${item}</li> ⁠)
+  .join("");
+</script>
 </body>
 <footer class="site-footer" role="contentinfo">
   <div class="container">
