@@ -1,1 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <title>Donar — Divino Amore</title>
+  <meta name="description" content="Divino Amore — Proyecto de danza cristiana que anuncia el Evangelio a través de la belleza, el arte y la fe.">
+  <meta name="keywords" content="Divino Amore, danza cristiana, Divino Amore Roma, Gospel Dance, arte y fe, Divino Amore Project">
+  <meta name="author" content="Divino Amore Project">
+  <meta name="robots" content="index, follow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <meta name="theme-color" content="#d4af37">
+</head>
+<body class="page-dona">
 
+<header class="site-header" role="banner">
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="chi-siamo.html">Quiénes somos</a>
+  <a href="esibizioni.html">Nuestras actuaciones</a>
+  <a href="media.html">Media</a>
+  <a href="risorse.html">Recursos</a>
+  <a href="dona.html" class="active">Donar</a>
+  <a href="contatti.html">Contactos</a>
+</nav>
+</header>
+
+<main class="section">
+  <div class="container">
+    <h1>Apoya Divino Amore</h1>
+    <p>Tu donación sostiene el proyecto <em>Divino Amore</em>: los ensayos, las actuaciones, los bailarines y las iniciativas de solidaridad
+    que nacen de este camino de fe, arte y servicio.</p>
+    <p class="hint">Cada aportación, incluso pequeña, es un gesto de amor que nos ayuda a llevar el Evangelio al mundo a través de la danza,
+    el arte y la solidaridad.</p>
+
+    <div class="donation-grid">
+      <!-- BLOCCO PAYPAL -->
+      <section class="donation-card">
+        <h2>Donar con PayPal</h2>
+        <p>Es la forma más sencilla e inmediata de apoyarnos en línea.</p>
+        <a class="btn-paypal" href="https://paypal.me/Divinoamoreproject" target="_blank" rel="noopener">
+          Donar ahora con PayPal
+        </a>
+      </section>
+
+      <!-- BLOCCO IBAN -->
+      <section class="donation-card">
+        <h2>Donar por transferencia bancaria</h2>
+        <p>También puedes hacer una transferencia a la tarjeta PostePay Evolution dedicada al proyecto.</p>
+
+        <div class="iban-box">
+          <p class="iban-label">Titular</p>
+          <p class="iban-holder">Simone Giovanni Messina</p>
+
+          <p class="iban-label">IBAN</p>
+          <p class="iban-code" id="iban-text">IT88L3608105138255416955429</p>
+
+          <button type="button"
+                  class="btn-copy-iban"
+                  data-iban="IT88L3608105138255416955429">
+            Copiar IBAN
+          </button>
+        </div>
+
+        <p class="hint">Esta tarjeta PostePay Evolution se utiliza exclusivamente para los gastos relacionados con el proyecto
+        <em>Divino Amore</em>.</p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p>©️ <span id="year"></span> Divino Amore — “Ama a tu prójimo como a ti mismo”.</p>
+    <p class="license">Contenidos protegidos por la licencia Creative Commons BY-NC-ND 4.0.</p>
+  </div>
+</footer>
+
+<script src="../script.js" defer></script>
+</body>
+</html>
