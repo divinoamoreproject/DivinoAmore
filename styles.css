@@ -1028,3 +1028,11 @@ body.page-risorse{
 .risorsa-list li {
   margin-bottom: 10px;
 }
+.badge.concluded {
+  background: #7a7a7a;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
