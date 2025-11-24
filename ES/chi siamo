@@ -1,1 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <title>Quiénes somos — Divino Amore</title>
+  <meta name="description" content="Divino Amore — Proyecto de danza cristiana que anuncia el Evangelio a través de la belleza, el arte y la fe.">
+  <meta name="keywords" content="Divino Amore, danza cristiana, Divino Amore Roma, Gospel Dance, arte y fe, Divino Amore Project">
+  <meta name="author" content="Divino Amore Project">
+  <meta name="robots" content="index, follow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <meta name="theme-color" content="#d4af37">
+</head>
+<body class="page-chi">
 
+<header class="site-header" role="banner">
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="chi-siamo.html" class="active">Quiénes somos</a>
+    <a href="esibizioni.html">Nuestras actuaciones</a>
+    <a href="media.html">Media</a>
+    <a href="risorse.html">Recursos</a>
+    <a href="dona.html">Donar</a>
+    <a href="contatti.html">Contactos</a>
+  </nav>
+</header>
+
+<main class="section">
+  <div class="container chi-container">
+
+    <h1>Quiénes somos</h1>
+
+    <p class="intro-lead">
+      <strong>Divino Amore</strong> es un camino de fe y arte que nace del deseo
+      de llevar el Evangelio al mundo a través de la danza, el arte y la solidaridad.
+    </p>
+
+    <p class="intro-lead">
+      No somos solo un grupo de bailarines: somos personas que intentan poner
+      su talento en manos de Dios para que se convierta en servicio, escucha y luz
+      para quien nos mira.
+    </p>
+
+    <!-- FOTO 1 -->
+    <figure class="chi-photo">
+      <img src="../assets/chi-cerchio.jpg"
+           alt="El grupo de Divino Amore en círculo con las manos sobre el corazón">
+    </figure>
+
+    <div class="chi-grid">
+
+      <section>
+        <h2>El corazón del proyecto</h2>
+        <p>
+          El proyecto está guiado por <strong>Simone Giovanni Messina</strong>, quien sintió profundamente
+          el deseo de unir su pasión por la danza con la Palabra de Dios.
+          Alrededor de este llamado se han reunido bailarinas y bailarines que comparten
+          el mismo deseo: anunciar el Amor con el cuerpo, con la presencia y con el cuidado.
+        </p>
+        <p>
+          Cada persona que entra en este camino no es solo “una parte de la coreografía”,
+          sino una historia, un rostro, una vida que es acogida y cuidada.
+        </p>
+      </section>
+
+      <section>
+        <h2>En qué creemos</h2>
+        <p>
+          Creemos que el arte puede convertirse en oración, que la danza puede ser un abrazo
+          para quien se siente lejos, y que la belleza no es un lujo, sino una manera concreta
+          de hablar de Dios.
+        </p>
+        <p>
+          Divino Amore quiere ser un signo de confianza: confianza en Dios que guía cada paso,
+          y confianza en el ser humano, que puede levantarse, sanar y volver a comenzar.
+        </p>
+      </section>
+
+    </div>
+
+    <section class="chi-section-full">
+      <h2>Cómo trabajamos</h2>
+      <p>
+        Nuestros ensayos no son solo ejercicios técnicos: son momentos de escucha,
+        compartir, oración y búsqueda. Cada movimiento nace de un sentido,
+        cada elección artística está unida a un mensaje.
+      </p>
+      <p>
+        Queremos que quien nos encuentre pueda sentirse acogido, nunca juzgado,
+        y ojalá llevarse a casa una pequeña semilla de paz, consuelo
+        o esperanza.
+      </p>
+    </section>
+
+    <p class="chi-quote">
+      “Ama a tu prójimo como a ti mismo.”<br>
+      <span>— Mt 22,39</span>
+    </p>
+
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p>©️ <span id="year"></span> Divino Amore — “Ama a tu prójimo como a ti mismo”.</p>
+    <p class="license">Contenidos protegidos por la licencia Creative Commons BY-NC-ND 4.0.</p>
+  </div>
+</footer>
+
+<script src="../script.js" defer></script>
+</body>
+</html>
