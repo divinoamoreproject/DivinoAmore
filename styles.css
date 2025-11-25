@@ -1036,3 +1036,10 @@ body.page-risorse{
   font-size: 0.85rem;
   text-transform: uppercase;
 }
+.breadcrumb {
+  position: absolute;
+  left: -9999px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
