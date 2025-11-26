@@ -1,0 +1,39 @@
+User-agent: *
+# Permettiamo l'indicizzazione del sito
+Allow: /
+
+# Blocchiamo cartelle tecniche o future non destinate alla scansione
+Disallow: /admin/
+Disallow: /login/
+Disallow: /draft/
+Disallow: /temp/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /backup/
+
+# Evitiamo l'indicizzazione di file interni
+Disallow: /*.psd$
+Disallow: /*.zip$
+Disallow: /*.rar$
+Disallow: /*.xml$  # tranne sitemap (lo permettiamo sotto)
+
+# Consentiamo accesso CSS, JS, fonts (importante per SEO e rendering moderno)
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+
+# Pagine duplicate con parametri (per pulizia SEO)
+Disallow: /*?ref=
+Disallow: /*?fbclid=
+Disallow: /*?utm_
+
+# Priorità linguistica (informale, non blocca nulla)
+# Google capisce che è un sito internazionale
+
+# Sitemap per tutte le lingue
+Sitemap: https://www.divinoamoreproject.com/sitemap.xml
+
+# Indicazioni per Bing / Baidu (valide perché hai il cinese)
+Host: https://www.divinoamoreproject.com
