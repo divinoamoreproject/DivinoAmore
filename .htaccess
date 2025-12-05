@@ -1,0 +1,5 @@
+# Forza il MIME Type corretto per sitemap.xml
+<Files "sitemap.xml">
+  ForceType application/xml
+  Header set Content-Type "application/xml"
+</Files>
